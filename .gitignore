@@ -3,7 +3,7 @@
 ### Example user template
 
 # IntelliJ project files
-app
+
 .idea
 *.iml
 node_modules
