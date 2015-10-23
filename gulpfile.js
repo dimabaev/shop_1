@@ -62,7 +62,7 @@ gulp.task('compass', function() {
 gulp.task('sync', function() {
 	browserSync.init({
 		server: {
-			proxy: paths.browserSync.baseDir
+			baseDir: paths.browserSync.baseDir
 		}
 	});
 });

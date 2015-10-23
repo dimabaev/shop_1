@@ -1,5 +1,97 @@
-h1 {
-	color: #fff;
-	font-size: 30px;
+// Подключаем шрифты
+@font-face {
+	font-family: regular;
+    src: url(font/webfontkit-regular/opensans-regular.eot);
+    src: url(font/webfontkit-regular/opensans-regular.ttf);
+    src: url(font/webfontkit-regular/opensans-regular.woff);
+    src: url(font/webfontkit-regular/opensans-regular.woff2);
 }
+@font-face {
+	font-family: semibold;
+	src: url(font/webfontkit-semibold/opensans-semibold.ttf);
+	src: url(font/webfontkit-semibold/opensans-semibold.eot);
+	src: url(font/webfontkit-semibold/opensans-semibold.woff);
+	src: url(font/webfontkit-semibold/opensans-semibold.woff2);
+}
+// end пдключ.чения шрифтов
+
+// переменные цветов
+$background_search:#f4f4f4;
+$color_location:#7b7b7b;
+$search_menu:#333333;
+$hover_and_active:#ff6600;
+// end переменные цветов
+
+// Шрифты
+$search_menu-font: regular;
+$search_location: semibold;
+// end Шрифты
+
+.container {
+		width: 1100px;
+		margin: auto;
+}
+
+.header_contact {
+	height: 77px;
+	background: #fff;
+
+		.container {
+		width: 1100px;
+		margin: auto;
+	}
+}
+
+.location_main {
+	float:left;
+	margin-left: 637px;
+	background: url(/img/map-pin.png) no-repeat;
+
+	.location_main-text {
+		font-size: 14px;
+		color:$color_location;
+		margin-left: 20px;
+		font-family: $search_menu-font;
+	}
+}
+
+.phon_main {
+	float: right;
+	background: url(/img/telephone.png) no-repeat;
+	
+	.phon_main-text{
+		font-size: 18px;
+		margin-left: 20px;
+	}
+}
+
+.header_search{
+	background: $background_search;
+}
+
+.logo_main {
+	display: inline-block
+}
+
+.search_main {
+	display: inline-block
+}
+
+.search_menu {
+	display: inline-block;
+	float: right;
+
+		.search_menu-item{
+			display: inline-block;
+		}
+		.search_menu-link{
+			margin-left: 35px;
+			color:$search_menu;
+			font-family: $search_location;
+			&:hover {
+				color:$hover_and_active;
+			}
+		}
+}
+
 
