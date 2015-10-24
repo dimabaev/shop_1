@@ -1,159 +1,176 @@
-<!DOCTYPE html>
+doctype html
 html(lang="ru")
-head
-	meta(charset="UTF-8")
-	title Document
-	//- css-main
-	link(rel="stylesheet" href="css/main.css")
-	//- css-vendor
-	link(rel="stylesheet" href="bower/normalize-css/normalize.css")	
-body
-	.wrapper
-		.main_content
-			header.header_contact
+	head
+		meta(charset="UTF-8")
+		title Document
+		//- css-main
+		link(rel="stylesheet" href="css/main.css")
+		//- css-vendor
+		link(rel="stylesheet" href="bower/normalize-css/normalize.css")
+		link(rel="stylesheet" href="bower/jquery-ui/themes/smoothness/jquery-ui.min.css")
+	body
+		.wrapper
+			.main_content
+				header.header_contact
+					.container
+						.social_icon
+							.social_icon-f.social_icon-main
+							.social_icon-vk.social_icon-main
+							.social_icon-tw.social_icon-main
+						.location_main
+							span.location_main-text
+								|ул.Маяковского 6, офис 17
+						.phon_main
+							span.phon_main-text
+								|+7(921) 123-12-13
+				header.header_search
+					.container
+						.logo_main
+							a.logo_main-link
+								img(src="/img/logo.png").logo_main-img
+						.search_main
+							input(type="search" placeholder="Что будем искать").search_main-input
+							input(type="submit").search_main-submit
+						ul.search_menu
+							li.search_menu-item
+								a(href="#").search_menu-link
+									|Карта проезда
+							li.search_menu-item
+								a(href="#").search_menu-link
+									|История заказов 
+							li.search_menu-item
+								a(href="#").search_menu-link
+									|Корзина
+				nav.navigation_main
+					.container
+						ul.navigation_main-list
+							li.navigation_main-item.navigation_main-active
+								a(href="#").navigation_main-link
+									|Планшеты
+							li.navigation_main-item
+								a(href="#").navigation_main-link
+									|Мобильные телефоны
+							li.navigation_main-item
+								a(href="#").navigation_main-link
+									|Mp3 плееры
+							li.navigation_main-item
+								a(href="#").navigation_main-link
+									|Персональные комьютеры 
+							li.navigation_main-item
+								a(href="#").navigation_main-link
+									|Ноутбуки
+							li.navigation_main-item
+								a(href="#").navigation_main-link
+									|Асессуары
+							li.navigation_main-item
+								a(href="#").navigation_main-link
+									|Бытовая техника
+				.navigation_text
+					.container
+						span.navigation_text-item
+						span.navigation_text-link
 				.container
-					.social_icon
-						.social_icon-f.social_icon-main
-						.social_icon-vk.social_icon-main
-						.social_icon-tw.social_icon-main
-					.location_main
-						span.location_main-text
-							|ул.Маяковского 6, офис 17
-					.phon_main
-						span.phon_main-text
-							|+7(921) 123-12-13
-			header.header_search
-				.container
-					.logo_main
-						a.logo_main-link
-							img(src="/img/logo.png").logo_main-img
-					.search_main
-						input(type="search" placeholder="Что будем искать").search_main-input
-						input(type="submit").search_main-submit
-					ul.search_menu
-						li.search_menu-item
-							a(href="#").search_menu-link
-								|Карта проезда
-						li.search_menu-item
-							a(href="#").search_menu-link
-								|История заказов 
-						li.search_menu-item
-							a(href="#").search_menu-link
-								|Корзина
-			nav.navigation_main
-				ul.navigation_main-list
-					li.navigation_main-item.navigation_main-active
-						a(href="#").navigation_main-link
-							|Планшеты
-					li.navigation_main-item
-						a(href="#").navigation_main-link
-							|Мобильные телефоны
-					li.navigation_main-item
-						a(href="#").navigation_main-link
-							|Mp3 плееры
-					li.navigation_main-item
-						a(href="#").navigation_main-link
-							|Персональные комьютеры 
-					li.navigation_main-item
-						a(href="#").navigation_main-link
-							|Ноутбуки
-					li.navigation_main-item
-						a(href="#").navigation_main-link
-							|Асессуары
-					li.navigation_main-item
-						a(href="#").navigation_main-link
-							|Бытовая техника
-			.navigation_text
-				span.navigation_text-item
-				span.navigation_text-link
-			aside.acordeon
-				.acordeon_styl
-					.filtr_availability
-						h2.acordeon_styl-header
-							|Наличие в магазинах
-						.filtr_availability-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_availability-text
-								|Во всех магазинах
-						.filtr_availability-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_availability-text
-								|В ближайших ко мне магазине
-					.filtr_brands
-						h2.acordeon_styl-header
-							|Бренды
-						.filtr_brands-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_brands-text
-								|Lenovo
-						.filtr_brands-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_brands-text
-								|Apple
-						.filtr_brands-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_brands-text
-								|Samsung
-						.filtr_brands-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_brands-text
-								|Asus
-						.filtr_brands-elem
-							input(type="checkbox").acordeon_styl-checkbox-round
-							span.filtr_brands-text
-								|Motorola
-						.filtr_brands-filtr
-							a(href="#").filtr_remove
-							span.filtr_remove-text
-								|Сбросить фильтр
-					.filtr_money			
-						h2.acordeon_styl-header
-							|Цены						
-						span.filtr_money-text
-							|от
-						input(type="text").filtr_money-input
-						span.filtr_money-text
-							|до
-						input(type="text").filtr_money-input
-					.filtr_color
-						h2.acordeon_styl-header
-							|Цвет
-						ul.filtr_color-list
-							li.filtr_color-item-red
-							li.filtr_color-item-gray
-							li.filtr_color-item-black
-							li.filtr_color-item-blue
-							li.filtr_color-item-red
-							li.filtr_color-item-yellow
-							li.filtr_color-item-orange
-							li.filtr_color-item-green
-							li.filtr_color-item-blueLight
-							li.filtr_color-item-purple
-							li.filtr_color-item-pink
-							li.filtr_color-item-brown
-					.filter_oc
-						.filter_oc-elem
-							input(type="checkbox").filter_oc-item
-							span.filter_oc-text
-								|Android
-						.filter_oc-elem
-							input(type="checkbox").filter_oc-item
-							span.filter_oc-text
-								|iOS
-						.filter_oc-elem
-							input(type="checkbox").filter_oc-item
-							span.filter_oc-text
-								|Windows Mobile
-						.filter_oc-elem
-							input(type="checkbox").filter_oc-item
-							span.filter_oc-text
-								|Symbian
-						.filter_oc-elem
-							input(type="checkbox").filter_oc-item
-							span.filter_oc-text
-								|Custom
-						.filter_oc-elem
-							a(href="#").filter_oc-link
-								span.filter_oc-text
-									|Сбросить фильтр
+					aside.acordeon
+						.acordeon_styl
+							.acordeon_styl-position
+								.filtr_availability
+									h2.acordeon_styl-header
+										|Наличие в магазинах
+									.filtr_availability-elem
+										input(type="radio").acordeon_styl-checkbox-round
+										span.filtr-text
+											|Во всех магазинах
+									.filtr_availability-elem
+										input(type="radio").acordeon_styl-checkbox-round
+										span.filtr-text
+											|В ближайших ко мне магазине
+								.filtr_brands
+									h2.acordeon_styl-header
+										|Бренды
+									.filtr_brands-elem
+										input(type="checkbox").acordeon_styl-checkbox-round
+										span.filtr-text
+											|Lenovo
+									.filtr_brands-elem
+										input(type="checkbox").acordeon_styl-checkbox-round
+										span.filtr-text
+											|Apple
+									.filtr_brands-elem
+										input(type="checkbox").acordeon_styl-checkbox-round
+										span.filtr-text
+											|Samsung
+									.filtr_brands-elem
+										input(type="checkbox").acordeon_styl-checkbox-round
+										span.filtr-text
+											|Asus
+									.filtr_brands-elem
+										input(type="checkbox").acordeon_styl-checkbox-round
+										span.filtr-text
+											|Motorola
+									.filtr_brands-filtr
+										a(href="#").filtr_remove
+											span.filtr_remove-text
+												|Сбросить фильтр
+								.filtr_money			
+									h2.acordeon_styl-header
+										|Цены
+									.filtr_money-position-left					
+										span.filtr_money-text
+											|от
+										input(type="text").filtr_money-input#minCost
+									.filtr_money-position-right
+										span.filtr_money-text
+											|до
+										input(type="text").filtr_money-input#maxCost
+									.filtr_money-position-range
+										#slider
+								.filtr_color
+									h2.acordeon_styl-header
+										|Цвет
+									ul.filtr_color-list
+										li.filtr_color-item.filtr_color-item-white
+										li.filtr_color-item.filtr_color-item-gray
+										li.filtr_color-item.filtr_color-item-black
+										li.filtr_color-item.filtr_color-item-blue
+										li.filtr_color-item.filtr_color-item-red
+										li.filtr_color-item.filtr_color-item-yellow
+										li.filtr_color-item.filtr_color-item-orange
+										li.filtr_color-item.filtr_color-item-green
+										li.filtr_color-item.filtr_color-item-blueLight
+										li.filtr_color-item.filtr_color-item-purple
+										li.filtr_color-item.filtr_color-item-pink
+										li.filtr_color-item.filtr_color-item-brown
+								.filter_oc
+									h2.acordeon_styl-header
+										|Операционные системы
+									.filter_oc-elem
+										input(type="checkbox").filter_oc-item
+										span.filtr-text
+											|Android
+									.filter_oc-elem
+										input(type="checkbox").filter_oc-item
+										span.filtr-text
+											|iOS
+									.filter_oc-elem
+										input(type="checkbox").filter_oc-item
+										span.filtr-text
+											|Windows Mobile
+									.filter_oc-elem
+										input(type="checkbox").filter_oc-item
+										span.filtr-text
+											|Symbian
+									.filter_oc-elem
+										input(type="checkbox").filter_oc-item
+										span.filtr-text
+											|Custom
+									.filter_oc-elem
+										a(href="#").filter_oc-link
+											span.filter_oc-text
+												|Сбросить фильтр
 
+
+		//-vendor-script										
+		script(src="bower/jquery/jquery.min.js")
+		script(src="bower/jquery-ui/jquery-ui.min.js")
+		//-main-script
+		script(src="js/main.js")

@@ -15,18 +15,40 @@
 }
 // end пдключ.чения шрифтов
 
+// разделительная полоска под каждым блоком акардиона 
+@mixin border-bottom {
+	padding-bottom: 20px;
+	border-bottom: 2px solid $background_body;
+}
+@mixin color_rectangl {
+	width: 37px;
+	height: 37px;
+	border: 1px solid #ddd;
+}
+
 // переменные цветов
 $background_search:#f4f4f4;
 $color_location:#7b7b7b;
 $search_menu:#333333;
 $hover_and_active:#ff6600;
+$background_body:#f4f4f4;
+$acordeon_color:#fbfbfb;
+$filtr_remove:#90c7fc;
 // end переменные цветов
 
 // Шрифты
 $search_menu-font: regular;
 $search_location: semibold;
 // end Шрифты
+ 
+// Размеры элементов на странице
+$header_search: 96px;
+$acordeon_widch:333px;
+// end размеров на странице 
 
+body {
+	background:$background_body;
+}
 .container {
 		width: 1100px;
 		margin: auto;
@@ -44,6 +66,7 @@ $search_location: semibold;
 
 .location_main {
 	float:left;
+	margin-top: 30px;
 	margin-left: 637px;
 	background: url(/img/map-pin.png) no-repeat;
 
@@ -58,6 +81,7 @@ $search_location: semibold;
 .phon_main {
 	float: right;
 	background: url(/img/telephone.png) no-repeat;
+	margin-top: 30px;
 	
 	.phon_main-text{
 		font-size: 18px;
@@ -67,25 +91,36 @@ $search_location: semibold;
 
 .header_search{
 	background: $background_search;
+	height: $header_search;
 }
 
 .logo_main {
-	display: inline-block
+	display: inline-block;
+	
 }
 
 .search_main {
-	display: inline-block
+	display: inline-block;
+	margin-left:58px;
+	padding-top: 40px;
+	.search_main-input{
+		width: 290px;
+		height: 35px;
+		border:none;
+		border-radius: 5px;
+	}
 }
 
 .search_menu {
 	display: inline-block;
 	float: right;
+	margin-top: 38px;
 
 		.search_menu-item{
 			display: inline-block;
 		}
 		.search_menu-link{
-			margin-left: 35px;
+			margin-left: 30px;
 			color:$search_menu;
 			font-family: $search_location;
 			&:hover {
@@ -94,4 +129,154 @@ $search_location: semibold;
 		}
 }
 
+.navigation_main {
+	padding:0px;
+	margin:0px;
+	background:#fff;
+	height: 52px;
+	.navigation_main-list{
+		list-style: none;
+		text-align: center;
+		padding:0px;
+	    margin:0px;
+	}
+	.navigation_main-item{
+		display: inline-block;
+		margin-top: 21px;  
+	}
+	.navigation_main-link{
+		text-decoration: none;
+		color:$color_location;
+		margin-left:-5px;
+		padding:16px 14px;
+	}
+}
+
+.acordeon {
+	float:left;
+		.acordeon_styl {
+			width: $acordeon_widch;
+			background:$acordeon_color;
+			border-radius: 5px;
+				.acordeon_styl-position{
+					padding-left:30px;
+				}
+					.filtr_availability{
+						@include border-bottom;
+						.filtr_availability-elem{
+							margin-bottom: 19px;
+						}
+							.acordeon_styl-header{
+								font-size: 16px;
+								color:$search_menu;
+								padding-top: 17px;
+							}
+							.filtr_availability-elem{
+								
+							}
+
+					}
+					.filtr_brands {
+						@include border-bottom;
+						.filtr_brands-elem{
+							margin-bottom: 19px;
+						}
+						.filtr_remove{
+							color:$filtr_remove;
+							&:hover{
+								color:darken($filtr_remove, 20%);
+							}
+						}
+					}
+					.filtr_money {
+						@include border-bottom;
+						.filtr_money-position-left{
+							float:left;
+						}	
+						.filtr_money-position-right{
+							float:right;
+							margin-right:30px;
+						}
+						.filtr_money-position-range{
+
+						}
+							.filtr_money-input{
+								width: 82px;
+								margin-left: 10px;
+								border-radius: 5px;
+							}
+							.filtr_money-text{
+								
+							}
+					}
+					.filtr_color {
+						@include border-bottom;
+						.filtr_color-item{
+							display: inline-block;
+							margin-bottom:24px;
+							margin-right: 24px;
+						}
+						.filtr_color-list{
+							list-style: none;
+							padding:0px;
+							.filtr_color-item-white{
+								width: 37px;
+								height: 37px;
+								background:#fff;
+								border: 1px solid #ddd;
+							}
+							.filtr_color-item-gray{
+								@include color_rectangl;
+								background: #cccccc;
+							}
+							.filtr_color-item-black{
+								@include color_rectangl;
+								background: black;
+							}
+							.filtr_color-item-blue{
+								@include color_rectangl;
+								background:#0a3153;
+							}
+						}
+					}
+					.filter_oc{
+						.filter_oc-elem{
+							margin-bottom: 19px;
+						}
+							.filter_oc-link{
+								color:$filtr_remove;
+								&:hover{
+									color:darken($filtr_remove, 20%);
+								}
+							}
+					}
+		}
+}
+
+.acordeon_styl-header{
+	font-size: 16px;
+	color:$search_menu;
+	padding-top: 17px;
+}
+
+.filtr-text {
+	margin-left:11px;
+}
+
+#slider {
+	width:280px;
+	height: 3px;
+	border: none;
+	background: #ddd;	
+}
+.ui-slider {
+	position: relative;
+	.ui-slider-handle{
+		position: absolute;
+		z-index: 2;
+		width: 13px;
+		height: 20px;
+		background: #fff;
+	}
+}
 
