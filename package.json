@@ -5,6 +5,7 @@
     "gulp": "^3.9.0",
     "gulp-compass": "^2.1.0",
     "gulp-jade": "^1.1.0",
-    "gulp-plumber": "^1.0.1"
+    "gulp-plumber": "^1.0.1",
+    "gulp.spritesmith": "^4.1.1"
   }
 }

@@ -10,7 +10,7 @@ html(lang="ru")
 		link(rel="stylesheet" href="bower/jquery-ui/themes/smoothness/jquery-ui.min.css")
 	body
 		.wrapper
-			.main_content
+			.main_content.clearfix
 				header.header_contact
 					.container
 						.social_icon
@@ -30,7 +30,7 @@ html(lang="ru")
 								img(src="/img/logo.png").logo_main-img
 						.search_main
 							input(type="search" placeholder="Что будем искать").search_main-input
-							input(type="submit").search_main-submit
+							input(type="submit" value="Найти").search_main-submit
 						ul.search_menu
 							li.search_menu-item
 								a(href="#").search_menu-link
@@ -44,11 +44,11 @@ html(lang="ru")
 				nav.navigation_main
 					.container
 						ul.navigation_main-list
-							li.navigation_main-item.navigation_main-active
+							li.navigation_main-item
 								a(href="#").navigation_main-link
 									|Планшеты
 							li.navigation_main-item
-								a(href="#").navigation_main-link
+								a(href="#").navigation_main-link.navigation_main-active
 									|Мобильные телефоны
 							li.navigation_main-item
 								a(href="#").navigation_main-link
@@ -76,36 +76,38 @@ html(lang="ru")
 								.filtr_availability
 									h2.acordeon_styl-header
 										|Наличие в магазинах
-									.filtr_availability-elem
-										input(type="radio").acordeon_styl-checkbox-round
-										span.filtr-text
-											|Во всех магазинах
-									.filtr_availability-elem
-										input(type="radio").acordeon_styl-checkbox-round
-										span.filtr-text
-											|В ближайших ко мне магазине
+									.filtr_availability-list
+										label.filtr_availability-elem
+											input(type="radio").acordeon_styl-checkbox-round
+											.acordeon_styl-checkbox-round--fake
+											.filtr-text
+												|Во всех магазинах
+										.filtr_availability-elem
+											input(type="radio").acordeon_styl-checkbox-round
+											label.filtr-text
+												|В ближайших ко мне магазине
 								.filtr_brands
 									h2.acordeon_styl-header
 										|Бренды
 									.filtr_brands-elem
 										input(type="checkbox").acordeon_styl-checkbox-round
-										span.filtr-text
+										label.filtr-text
 											|Lenovo
 									.filtr_brands-elem
 										input(type="checkbox").acordeon_styl-checkbox-round
-										span.filtr-text
+										label.filtr-text
 											|Apple
 									.filtr_brands-elem
 										input(type="checkbox").acordeon_styl-checkbox-round
-										span.filtr-text
+										label.filtr-text
 											|Samsung
 									.filtr_brands-elem
 										input(type="checkbox").acordeon_styl-checkbox-round
-										span.filtr-text
+										label.filtr-text
 											|Asus
 									.filtr_brands-elem
 										input(type="checkbox").acordeon_styl-checkbox-round
-										span.filtr-text
+										label.filtr-text
 											|Motorola
 									.filtr_brands-filtr
 										a(href="#").filtr_remove
@@ -122,8 +124,11 @@ html(lang="ru")
 										span.filtr_money-text
 											|до
 										input(type="text").filtr_money-input#maxCost
-									.filtr_money-position-range
-										#slider
+									.filtr_money-position-range.clearfix
+										#slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all
+											.ui-slider-range.ui-widget-header.ui-corner-all
+											span.ui-slider-handle.ui-state-default.ui-corner-all
+											span.ui-slider-handle.ui-state-default.ui-corner-all
 								.filtr_color
 									h2.acordeon_styl-header
 										|Цвет
@@ -167,7 +172,652 @@ html(lang="ru")
 										a(href="#").filter_oc-link
 											span.filter_oc-text
 												|Сбросить фильтр
+					//-правая колнка 
+					.container-variabl.clearfix
+						.main-content
+							section.navigation_element
+								span.navigation_element-span
+									|Сортировка по 
+								.navigation_element-block
+									ul.navigation_element-list
+										li.navigation_element-elem
+											|по цене
+										li.navigation_element-elem-2
+											|по популярности
+								.navigation_element-block-2
+									span.navigation_element-span-2
+										|Вид каталога
+									ul.navigation_element-list2
+										li.navigation_element-el.navigation_element-elem-box1
 
+										li.navigation_element-el.navigation_element-elem-box2
+	
+										li.navigation_element-el.navigation_element-elem-box3
+							section.main_elements.clearfix
+								ul.main_elements-list
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+									li.main_elements-item
+										.main_elements-wrapper
+											img(src="/img/smart.png").main_elements-img
+										.main_elements-wrapper-block
+											.main_elements-miniwapper
+												img(src="/img/smartMini-2.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini-3.png").main_elements-imgmini
+											.main_elements-miniwapper
+												img(src="/img/smartMini.png").main_elements-imgmini
+										.main_elements-block-info
+											h2.main_elements-header
+												|Samsung GT-I9301I  GALAXY S 3   
+											ul.main_elements-body
+												li.main_elements-text
+													|Тип SIM-карты
+													span.main_elements-items
+														|Micro-SIM
+												li.main_elements-text
+													|Количество SIM-карт
+													span.main_elements-items
+														|1
+												li.main_elements-text
+													|Цвет
+													span.main_elements-items
+														|Белый
+												li.main_elements-text
+													|OC
+													span.main_elements-items
+														|Android
+												li.main_elements-text
+													|Связь 3G
+													span.main_elements-items
+														|Есть
+												li.main_elements-text
+													|4G(LTE)
+													span.main_elements-items
+														|Нет
+												li.main_elements-text
+													|GPS-модуль
+													span.main_elements-items
+														|Есть
+											ul.rating
+												li.rating-item.current
+													span.star1
+												li.rating-item
+													span.star2
+												li.rating-item
+													span.star3
+												li.rating-item
+													span.star4
+												li.rating-item
+													span.star5
+											.main_elements-money
+												span.main_elements-money-text
+													|11 290 ₽
+											.main_elements-indAndBasket.clearfix
+												span.main_elements-ind
+													|В наличии
+												input(type="submit" value="В корзину").main_elements-basket
+							section.main_switch.clearfix
+								nav.switch_main.clearfix
+									ul.switch_main-list
+										li.switch_main-item
+											a(href="#").switch_main-link
+													|<
+										li.switch_main-item
+											a(href="#").switch_main-link.switch_main-active
+													|1
+										li.switch_main-item
+											a(href="#").switch_main-link 
+													|2
+										li.switch_main-item
+											a(href="#").switch_main-link 
+													|3
+										li.switch_main-item
+											a(href="#").switch_main-link 
+													|>							
+					section.main_info
+						.main_info-text
+							h2.main_info-header
+								|Важная информация
+							.main_info-left
+								p.main_info-p
+									|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
+								p.main_info-p
+									|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+								p.main_info-p
+									|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+							.main_info-right
+								p.main_info-p
+									|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
+								p.main_info-p
+									|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+								p.main_info-p
+									|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+		footer.footer_main
+			.container.clearfix
+				.footer_main-contant
+					.logo_footer
+						a(href="#").logo_footer-link
+							img(src="/img/logo_footer.png").logo_footer-img
+					.footer_main-right-column
+						.icon_social
+							ul.icon_social-list
+								li.icon_social-el
+									a(href="#").icon_social-link.icon_social-f
+								li.icon_social-el
+									a(href="#").icon_social-link.icon_social-vk
+								li.icon_social-el
+									a(href="#").icon_social-link.icon_social-tw
+						nav.navigation_footer
+							ul.navigation_footer-list
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Планшеты
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Мобильные телефоны
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Mp3 плееры
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Персональные компьютеры
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Ноутбуки
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Аксессуары
+								li.navigation_footer-el
+									a(href="#").navigation_footer-link
+										|Батовая техника
+					//-p.of_inf
+						|All rights reserved. 2015. no copy alowed														
+
+
+													
+
+
+
+									
 
 		//-vendor-script										
 		script(src="bower/jquery/jquery.min.js")

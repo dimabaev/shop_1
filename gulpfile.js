@@ -4,6 +4,7 @@ var
 	jade        = require('gulp-jade'),
 	browserSync = require('browser-sync').create(),
 	plumber     = require('gulp-plumber');
+	// spritesmith = require('gulp.spritesmith');
 
 /* --------- paths --------- */
 
@@ -43,6 +44,15 @@ gulp.task('jade', function() {
 		}))
 		.pipe(gulp.dest(paths.jade.destination));
 });
+
+// gulp-sprite
+// gulp.task('sprite', function () {
+//   var spriteData = gulp.src('app/img/*.png').pipe(spritesmith({
+//     imgName: 'sprite.png',
+//     cssName: 'sprite.scss'
+//   }));
+//   return spriteData.pipe(gulp.dest('app/sprites/'));
+// });
 
 /* --------- scss-compass --------- */
 
