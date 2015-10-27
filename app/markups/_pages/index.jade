@@ -73,46 +73,46 @@ html(lang="ru")
 					aside.acordeon
 						.acordeon_styl
 							.acordeon_styl-position
-								.filtr_availability
-									h2.acordeon_styl-header
-										|Наличие в магазинах
-									.filtr_availability-list
-										label.filtr_availability-elem
-											input(type="radio").acordeon_styl-checkbox-round
-											.acordeon_styl-checkbox-round--fake
-											.filtr-text
+								form.filtr_availability
+									ul.acordion_m
+										li.acordion_m-list
+											h2.acordeon_styl-header
+												|Наличие в магазинах
+											input(type="radio" name="world").acordion_m-input
+											label.acordion_m-label
 												|Во всех магазинах
-										.filtr_availability-elem
-											input(type="radio").acordeon_styl-checkbox-round
+
+										li.acordion_m-list
+											input(type="radio" name="world").acordion_m-input
+											label.acordion_m-label
+												|В ближайших ко мне магазинах									
+									ul.filtr_brands
+										li.filtr_brands-elem
+											h2.acordeon_styl-header
+												|Бренды
+											input(type="checkbox").acordeon_styl-checkbox-round
 											label.filtr-text
-												|В ближайших ко мне магазине
-								.filtr_brands
-									h2.acordeon_styl-header
-										|Бренды
-									.filtr_brands-elem
-										input(type="checkbox").acordeon_styl-checkbox-round
-										label.filtr-text
-											|Lenovo
-									.filtr_brands-elem
-										input(type="checkbox").acordeon_styl-checkbox-round
-										label.filtr-text
-											|Apple
-									.filtr_brands-elem
-										input(type="checkbox").acordeon_styl-checkbox-round
-										label.filtr-text
-											|Samsung
-									.filtr_brands-elem
-										input(type="checkbox").acordeon_styl-checkbox-round
-										label.filtr-text
-											|Asus
-									.filtr_brands-elem
-										input(type="checkbox").acordeon_styl-checkbox-round
-										label.filtr-text
-											|Motorola
-									.filtr_brands-filtr
-										a(href="#").filtr_remove
-											span.filtr_remove-text
-												|Сбросить фильтр
+												|Lenovo
+										li.filtr_brands-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											label.filtr-text
+												|Apple
+										li.filtr_brands-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											label.filtr-text
+												|Samsung
+										li.filtr_brands-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											label.filtr-text
+												|Asus
+										li.filtr_brands-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											label.filtr-text
+												|Motorola
+										li.filtr_brands-filtr
+											a(href="#").filtr_remove
+												span.filtr_remove-text
+													|Сбросить фильтр
 								.filtr_money			
 									h2.acordeon_styl-header
 										|Цены

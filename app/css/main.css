@@ -1,3 +1,115 @@
+.acordion_m {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.acordion_m:hover {
+  background: url("/img/slider_up.png") no-repeat;
+  background-position: right 20px top 35px;
+  cursor: pointer;
+}
+.acordion_m .acordion_m-list {
+  display: inline-block;
+}
+.acordion_m .acordion_m-list .acordion_m-input:checked + .acordion_m-label:before {
+  border: solid 4px #f60;
+}
+.acordion_m .acordion_m-list .acordion_m-input:checked + .acordion_m-label:after {
+  transform: scale(0.9);
+  transition: 0.2s;
+}
+.acordion_m .acordion_m-list .acordion_m-label {
+  display: block;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 35px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.acordion_m .acordion_m-list .acordion_m-label:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: solid 3px #dee2e5;
+}
+.acordion_m .acordion_m-list .acordion_m-label .acordion_m-label:hover {
+  border: 3px solid #ff6600;
+  transition: 0.3s;
+}
+.acordion_m .acordion_m-list .acordion_m-label:after {
+  transform: scale(0);
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #f60;
+}
+
+.filtr_brands {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.filtr_brands .filtr_brands-elem .acordeon_styl-checkbox-round:checked + .filtr-text:before {
+  border: solid 3px #f60;
+  background: #f60;
+}
+.filtr_brands .filtr_brands-elem .acordeon_styl-checkbox-round:checked + .filtr-text:after {
+  transform: scale(0.99);
+  transition: 0.2s;
+}
+.filtr_brands .filtr_brands-elem .filtr-text:hover:after {
+  background: url("/img/check_2222.png");
+}
+.filtr_brands .filtr_brands-elem .filtr-text {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.filtr_brands .filtr_brands-elem .filtr-text:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: solid 3px #dee2e5;
+  border-radius: 5px;
+}
+.filtr_brands .filtr_brands-elem .filtr-text:after {
+  transform: scale(0);
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  content: '';
+  width: 13px;
+  height: 10px;
+  background: url("/img/check_1111.png");
+}
+.filtr_brands .filtr_brands-elem .filtr-text:hover:after {
+  transform: scale(0);
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  content: '';
+  width: 13px;
+  height: 10px;
+  background: url("/img/check_2222.png");
+}
+
 .icons-sprite, .header_contact .container .social_icon .social_icon-vk, .icon_social .icon_social-list .icon_social-el .icon_social-f {
   background-image: url('../img/icons-s8b9d252fd4.png');
   background-repeat: no-repeat;
@@ -204,9 +316,7 @@ body {
   cursor: pointer;
 }
 .acordeon .acordeon_styl .filtr_availability .filtr_availability-list .filtr_availability-elem .acordeon_styl-checkbox-round {
-  position: absolute;
-  top: 0;
-  left: -999999px;
+  display: none;
 }
 .acordeon .acordeon_styl .filtr_availability .acordeon_styl-header {
   font-size: 16px;
@@ -473,9 +583,11 @@ body {
   border-radius: 5px;
   margin-bottom: 20px;
   margin-right: 8px;
+  transition: 0.3s;
 }
 .main_elements .main_elements-list .main_elements-item:hover {
   box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 .main_elements .main_elements-list .main_elements-item .main_elements-wrapper {
   margin: 20px auto;
@@ -651,25 +763,4 @@ body {
 
 .icon_social .icon_social-list .icon_social-el .icon_social-f {
   background-position: 0 -138px;
-}
-
-.filtr-text:before {
-  content: "";
-  display: block;
-  width: 19px;
-  height: 19px;
-  float: left;
-  border: 3px solid #dee1e4;
-  border-radius: 50%;
-  box-sizing: border-box;
-}
-
-.filtr-text:hover:before {
-  border: 3px solid #ff6600;
-  transition: 0.3s;
-}
-
-.acordeon_styl-checkbox-round:checked + .filtr-text:before {
-  border: 3px solid #ff6600;
-  background: #ff6600;
 }
