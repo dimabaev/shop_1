@@ -14,3 +14,7 @@
           jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
     }
   });
+
+    $(function() {
+    $( "#accordion" ).accordion();
+  });

@@ -7,7 +7,7 @@ html(lang="ru")
 		link(rel="stylesheet" href="css/main.css")
 		//- css-vendor
 		link(rel="stylesheet" href="bower/normalize-css/normalize.css")
-		link(rel="stylesheet" href="bower/jquery-ui/themes/smoothness/jquery-ui.min.css")
+		//- link(rel="stylesheet" href="bower/jquery-ui/themes/smoothness/jquery-ui.min.css")
 	body
 		.wrapper
 			.main_content.clearfix
@@ -67,111 +67,121 @@ html(lang="ru")
 									|Бытовая техника
 				.navigation_text
 					.container
-						span.navigation_text-item
-						span.navigation_text-link
+						ul.navigation_text
+							li.navigation_text-item
+								a(href="#").navigation_text-link
+									|Главня
+							li.navigation_text-item
+								a(href="#").navigation_text-link
+									|>
+							li.navigation_text-item
+								a(href="#").navigation_text-link.navigation_text-link--active
+									|Каталог
+						h2.watch_text
+							|Мобильные телефоны
 				.container
 					aside.acordeon
 						.acordeon_styl
 							.acordeon_styl-position
 								form.filtr_availability
 									ul.acordion_m
-										li.acordion_m-list
-											h2.acordeon_styl-header
-												|Наличие в магазинах
-											input(type="radio" name="world").acordion_m-input
+										h2.acordeon_styl-header#accordion
+											|Наличие в магазинах
+										li(style="display: block;").acordion_m-list.showHide
+											input(type="radio" name="world").acordion_m-input#input-round
 											label.acordion_m-label
 												|Во всех магазинах
 
-										li.acordion_m-list
-											input(type="radio" name="world").acordion_m-input
+										li(style="display: block;").acordion_m-list.showHide
+											input(type="radio" name="world").acordion_m-input#input-round
 											label.acordion_m-label
 												|В ближайших ко мне магазинах									
 									ul.filtr_brands
-										li.filtr_brands-elem
-											h2.acordeon_styl-header
-												|Бренды
+										h2.acordeon_styl-header
+											|Бренды
+										li(style="display: block;").filtr_brands-elem.showHide
 											input(type="checkbox").acordeon_styl-checkbox-round
 											label.filtr-text
 												|Lenovo
-										li.filtr_brands-elem
+										li(style="display: block;").filtr_brands-elem.showHide
 											input(type="checkbox").acordeon_styl-checkbox-round
 											label.filtr-text
 												|Apple
-										li.filtr_brands-elem
+										li(style="display: block;").filtr_brands-elem.showHide
 											input(type="checkbox").acordeon_styl-checkbox-round
 											label.filtr-text
 												|Samsung
-										li.filtr_brands-elem
+										li(style="display: block;").filtr_brands-elem.showHide
 											input(type="checkbox").acordeon_styl-checkbox-round
 											label.filtr-text
 												|Asus
-										li.filtr_brands-elem
+										li(style="display: block;").filtr_brands-elem.showHide
 											input(type="checkbox").acordeon_styl-checkbox-round
 											label.filtr-text
 												|Motorola
-										li.filtr_brands-filtr
+										li(style="display: block;").filtr_brands-elem.showHide
 											a(href="#").filtr_remove
 												span.filtr_remove-text
 													|Сбросить фильтр
-								.filtr_money			
-									h2.acordeon_styl-header
-										|Цены
-									.filtr_money-position-left					
-										span.filtr_money-text
-											|от
-										input(type="text").filtr_money-input#minCost
-									.filtr_money-position-right
-										span.filtr_money-text
-											|до
-										input(type="text").filtr_money-input#maxCost
-									.filtr_money-position-range.clearfix
-										#slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all
-											.ui-slider-range.ui-widget-header.ui-corner-all
-											span.ui-slider-handle.ui-state-default.ui-corner-all
-											span.ui-slider-handle.ui-state-default.ui-corner-all
-								.filtr_color
-									h2.acordeon_styl-header
-										|Цвет
-									ul.filtr_color-list
-										li.filtr_color-item.filtr_color-item-white
-										li.filtr_color-item.filtr_color-item-gray
-										li.filtr_color-item.filtr_color-item-black
-										li.filtr_color-item.filtr_color-item-blue
-										li.filtr_color-item.filtr_color-item-red
-										li.filtr_color-item.filtr_color-item-yellow
-										li.filtr_color-item.filtr_color-item-orange
-										li.filtr_color-item.filtr_color-item-green
-										li.filtr_color-item.filtr_color-item-blueLight
-										li.filtr_color-item.filtr_color-item-purple
-										li.filtr_color-item.filtr_color-item-pink
-										li.filtr_color-item.filtr_color-item-brown
-								.filter_oc
-									h2.acordeon_styl-header
-										|Операционные системы
-									.filter_oc-elem
-										input(type="checkbox").filter_oc-item
-										span.filtr-text
-											|Android
-									.filter_oc-elem
-										input(type="checkbox").filter_oc-item
-										span.filtr-text
-											|iOS
-									.filter_oc-elem
-										input(type="checkbox").filter_oc-item
-										span.filtr-text
-											|Windows Mobile
-									.filter_oc-elem
-										input(type="checkbox").filter_oc-item
-										span.filtr-text
-											|Symbian
-									.filter_oc-elem
-										input(type="checkbox").filter_oc-item
-										span.filtr-text
-											|Custom
-									.filter_oc-elem
-										a(href="#").filter_oc-link
-											span.filter_oc-text
-												|Сбросить фильтр
+									ul.filtr_money			
+										h2.acordeon_styl-header
+											|Цены
+										li(style="display: block;").filtr_money-position-left.showHide
+											span.filtr_money-text
+												|от
+											input(type="text").filtr_money-input#minCost
+										li.filtr_money-position-right
+											span.filtr_money-text
+												|до
+											input(type="text").filtr_money-input#maxCost
+										li.filtr_money-position-range.clearfix
+											#slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all
+												.ui-slider-range.ui-widget-header.ui-corner-all
+												span.ui-slider-handle.ui-state-default.ui-corner-all
+												span.ui-slider-handle.ui-state-default.ui-corner-all
+									.filtr_color
+										h2.acordeon_styl-header
+											|Цвет
+										ul.filtr_color-list
+											li.filtr_color-item.filtr_color-item-white
+											li.filtr_color-item.filtr_color-item-gray
+											li.filtr_color-item.filtr_color-item-black
+											li.filtr_color-item.filtr_color-item-blue
+											li.filtr_color-item.filtr_color-item-red
+											li.filtr_color-item.filtr_color-item-yellow
+											li.filtr_color-item.filtr_color-item-orange
+											li.filtr_color-item.filtr_color-item-green
+											li.filtr_color-item.filtr_color-item-blueLight
+											li.filtr_color-item.filtr_color-item-purple
+											li.filtr_color-item.filtr_color-item-pink
+											li.filtr_color-item.filtr_color-item-brown
+									ul.filter_oc
+										h2.acordeon_styl-header
+											|Операционные системы
+										li(style="display: block;").filter_oc-elem.showHide
+											input(type="checkbox").acordeon_styl-checkbox-round
+											span.filtr-text
+												|Android
+										li.filter_oc-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											span.filtr-text
+												|iOS
+										li.filter_oc-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											span.filtr-text
+												|Windows Mobile
+										li.filter_oc-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											span.filtr-text
+												|Symbian
+										li.filter_oc-elem
+											input(type="checkbox").acordeon_styl-checkbox-round
+											span.filtr-text
+												|Custom
+										li.filter_oc-elem
+											a(href="#").filter_oc-link
+												span.filter_oc-text
+													|Сбросить фильтр
 					//-правая колнка 
 					.container-variabl.clearfix
 						.main-content
@@ -753,24 +763,25 @@ html(lang="ru")
 										li.switch_main-item
 											a(href="#").switch_main-link 
 													|>							
-					section.main_info
-						.main_info-text
-							h2.main_info-header
-								|Важная информация
-							.main_info-left
-								p.main_info-p
-									|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
-								p.main_info-p
-									|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
-								p.main_info-p
-									|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
-							.main_info-right
-								p.main_info-p
-									|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
-								p.main_info-p
-									|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
-								p.main_info-p
-									|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+		section.main_info
+			.container.clearfix
+				.main_info-text
+					h2.main_info-header
+					|Важная информация
+				.main_info-left
+					p.main_info-p
+						|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
+					p.main_info-p
+						|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+					p.main_info-p
+						|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
+				.main_info-right
+					p.main_info-p
+						|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
+					p.main_info-p
+						|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
+					p.main_info-p
+						|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
 		footer.footer_main
 			.container.clearfix
 				.footer_main-contant
@@ -824,3 +835,4 @@ html(lang="ru")
 		script(src="bower/jquery-ui/jquery-ui.min.js")
 		//-main-script
 		script(src="js/main.js")
+		script(src="js/accordeon.js")

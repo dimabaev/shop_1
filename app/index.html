@@ -5,7 +5,6 @@
 		<title>Document</title>
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
-		<link rel="stylesheet" href="bower/jquery-ui/themes/smoothness/jquery-ui.min.css">
 	</head>
 	<body>
 		<div class="wrapper">
@@ -49,7 +48,14 @@
 					</div>
 				</nav>
 				<div class="navigation_text">
-					<div class="container"><span class="navigation_text-item"></span><span class="navigation_text-link"></span></div>
+					<div class="container">
+						<ul class="navigation_text">
+							<li class="navigation_text-item"><a href="#" class="navigation_text-link">Главня</a></li>
+							<li class="navigation_text-item"><a href="#" class="navigation_text-link">></a></li>
+							<li class="navigation_text-item"><a href="#" class="navigation_text-link navigation_text-link--active">Каталог</a></li>
+						</ul>
+						<h2 class="watch_text">Мобильные телефоны</h2>
+					</div>
 				</div>
 				<div class="container">
 					<aside class="acordeon">
@@ -57,91 +63,91 @@
 							<div class="acordeon_styl-position">
 								<form class="filtr_availability">
 									<ul class="acordion_m">
-										<li class="acordion_m-list">
-											<h2 class="acordeon_styl-header">Наличие в магазинах</h2>
-											<input type="radio" name="world" class="acordion_m-input">
+										<h2 id="accordion" class="acordeon_styl-header">Наличие в магазинах</h2>
+										<li style="display: block;" class="acordion_m-list showHide">
+											<input type="radio" name="world" id="input-round" class="acordion_m-input">
 											<label class="acordion_m-label">Во всех магазинах</label>
 										</li>
-										<li class="acordion_m-list">
-											<input type="radio" name="world" class="acordion_m-input">
+										<li style="display: block;" class="acordion_m-list showHide">
+											<input type="radio" name="world" id="input-round" class="acordion_m-input">
 											<label class="acordion_m-label">В ближайших ко мне магазинах									</label>
 										</li>
 									</ul>
 									<ul class="filtr_brands">
-										<li class="filtr_brands-elem">
-											<h2 class="acordeon_styl-header">Бренды</h2>
+										<h2 class="acordeon_styl-header">Бренды</h2>
+										<li style="display: block;" class="filtr_brands-elem showHide">
 											<input type="checkbox" class="acordeon_styl-checkbox-round">
 											<label class="filtr-text">Lenovo</label>
 										</li>
-										<li class="filtr_brands-elem">
+										<li style="display: block;" class="filtr_brands-elem showHide">
 											<input type="checkbox" class="acordeon_styl-checkbox-round">
 											<label class="filtr-text">Apple</label>
 										</li>
-										<li class="filtr_brands-elem">
+										<li style="display: block;" class="filtr_brands-elem showHide">
 											<input type="checkbox" class="acordeon_styl-checkbox-round">
 											<label class="filtr-text">Samsung</label>
 										</li>
-										<li class="filtr_brands-elem">
+										<li style="display: block;" class="filtr_brands-elem showHide">
 											<input type="checkbox" class="acordeon_styl-checkbox-round">
 											<label class="filtr-text">Asus</label>
 										</li>
-										<li class="filtr_brands-elem">
+										<li style="display: block;" class="filtr_brands-elem showHide">
 											<input type="checkbox" class="acordeon_styl-checkbox-round">
 											<label class="filtr-text">Motorola</label>
 										</li>
-										<li class="filtr_brands-filtr"><a href="#" class="filtr_remove"><span class="filtr_remove-text">Сбросить фильтр</span></a></li>
+										<li style="display: block;" class="filtr_brands-elem showHide"><a href="#" class="filtr_remove"><span class="filtr_remove-text">Сбросить фильтр</span></a></li>
+									</ul>
+									<ul class="filtr_money">			
+										<h2 class="acordeon_styl-header">Цены</h2>
+										<li style="display: block;" class="filtr_money-position-left showHide"><span class="filtr_money-text">от</span>
+											<input type="text" id="minCost" class="filtr_money-input">
+										</li>
+										<li class="filtr_money-position-right"><span class="filtr_money-text">до</span>
+											<input type="text" id="maxCost" class="filtr_money-input">
+										</li>
+										<li class="filtr_money-position-range clearfix">
+											<div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+												<div class="ui-slider-range ui-widget-header ui-corner-all"></div><span class="ui-slider-handle ui-state-default ui-corner-all"></span><span class="ui-slider-handle ui-state-default ui-corner-all"></span>
+											</div>
+										</li>
+									</ul>
+									<div class="filtr_color">
+										<h2 class="acordeon_styl-header">Цвет</h2>
+										<ul class="filtr_color-list">
+											<li class="filtr_color-item filtr_color-item-white"></li>
+											<li class="filtr_color-item filtr_color-item-gray"></li>
+											<li class="filtr_color-item filtr_color-item-black"></li>
+											<li class="filtr_color-item filtr_color-item-blue"></li>
+											<li class="filtr_color-item filtr_color-item-red"></li>
+											<li class="filtr_color-item filtr_color-item-yellow"></li>
+											<li class="filtr_color-item filtr_color-item-orange"></li>
+											<li class="filtr_color-item filtr_color-item-green"></li>
+											<li class="filtr_color-item filtr_color-item-blueLight"></li>
+											<li class="filtr_color-item filtr_color-item-purple"></li>
+											<li class="filtr_color-item filtr_color-item-pink"></li>
+											<li class="filtr_color-item filtr_color-item-brown"></li>
+										</ul>
+									</div>
+									<ul class="filter_oc">
+										<h2 class="acordeon_styl-header">Операционные системы</h2>
+										<li style="display: block;" class="filter_oc-elem showHide">
+											<input type="checkbox" class="acordeon_styl-checkbox-round"><span class="filtr-text">Android</span>
+										</li>
+										<li class="filter_oc-elem">
+											<input type="checkbox" class="acordeon_styl-checkbox-round"><span class="filtr-text">iOS</span>
+										</li>
+										<li class="filter_oc-elem">
+											<input type="checkbox" class="acordeon_styl-checkbox-round"><span class="filtr-text">Windows Mobile</span>
+										</li>
+										<li class="filter_oc-elem">
+											<input type="checkbox" class="acordeon_styl-checkbox-round"><span class="filtr-text">Symbian</span>
+										</li>
+										<li class="filter_oc-elem">
+											<input type="checkbox" class="acordeon_styl-checkbox-round"><span class="filtr-text">Custom</span>
+										</li>
+										<li class="filter_oc-elem"><a href="#" class="filter_oc-link"><span class="filter_oc-text">Сбросить фильтр</span></a></li>
 									</ul>
 								</form>
-								<div class="filtr_money">			
-									<h2 class="acordeon_styl-header">Цены</h2>
-									<div class="filtr_money-position-left">					<span class="filtr_money-text">от</span>
-										<input type="text" id="minCost" class="filtr_money-input">
-									</div>
-									<div class="filtr_money-position-right"><span class="filtr_money-text">до</span>
-										<input type="text" id="maxCost" class="filtr_money-input">
-									</div>
-									<div class="filtr_money-position-range clearfix">
-										<div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
-											<div class="ui-slider-range ui-widget-header ui-corner-all"></div><span class="ui-slider-handle ui-state-default ui-corner-all"></span><span class="ui-slider-handle ui-state-default ui-corner-all"></span>
-										</div>
-									</div>
-								</div>
-								<div class="filtr_color">
-									<h2 class="acordeon_styl-header">Цвет</h2>
-									<ul class="filtr_color-list">
-										<li class="filtr_color-item filtr_color-item-white"></li>
-										<li class="filtr_color-item filtr_color-item-gray"></li>
-										<li class="filtr_color-item filtr_color-item-black"></li>
-										<li class="filtr_color-item filtr_color-item-blue"></li>
-										<li class="filtr_color-item filtr_color-item-red"></li>
-										<li class="filtr_color-item filtr_color-item-yellow"></li>
-										<li class="filtr_color-item filtr_color-item-orange"></li>
-										<li class="filtr_color-item filtr_color-item-green"></li>
-										<li class="filtr_color-item filtr_color-item-blueLight"></li>
-										<li class="filtr_color-item filtr_color-item-purple"></li>
-										<li class="filtr_color-item filtr_color-item-pink"></li>
-										<li class="filtr_color-item filtr_color-item-brown"></li>
-									</ul>
-								</div>
-								<div class="filter_oc">
-									<h2 class="acordeon_styl-header">Операционные системы</h2>
-									<div class="filter_oc-elem">
-										<input type="checkbox" class="filter_oc-item"><span class="filtr-text">Android</span>
-									</div>
-									<div class="filter_oc-elem">
-										<input type="checkbox" class="filter_oc-item"><span class="filtr-text">iOS</span>
-									</div>
-									<div class="filter_oc-elem">
-										<input type="checkbox" class="filter_oc-item"><span class="filtr-text">Windows Mobile</span>
-									</div>
-									<div class="filter_oc-elem">
-										<input type="checkbox" class="filter_oc-item"><span class="filtr-text">Symbian</span>
-									</div>
-									<div class="filter_oc-elem">
-										<input type="checkbox" class="filter_oc-item"><span class="filtr-text">Custom</span>
-									</div>
-									<div class="filter_oc-elem"><a href="#" class="filter_oc-link"><span class="filter_oc-text">Сбросить фильтр</span></a></div>
-								</div>
 							</div>
 						</div>
 					</aside>
@@ -464,24 +470,26 @@
 							</section>
 						</div>
 					</div>
-					<section class="main_info">
-						<div class="main_info-text">
-							<h2 class="main_info-header">Важная информация</h2>
-							<div class="main_info-left">
-								<p class="main_info-p">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. </p>
-								<p class="main_info-p">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-								<p class="main_info-p">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
-							</div>
-							<div class="main_info-right">
-								<p class="main_info-p">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. </p>
-								<p class="main_info-p">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
-								<p class="main_info-p">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
-							</div>
-						</div>
-					</section>
 				</div>
 			</div>
 		</div>
+		<section class="main_info">
+			<div class="container clearfix">
+				<div class="main_info-text">
+					<h2 class="main_info-header"></h2>Важная информация
+				</div>
+				<div class="main_info-left">
+					<p class="main_info-p">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. </p>
+					<p class="main_info-p">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p class="main_info-p">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+				</div>
+				<div class="main_info-right">
+					<p class="main_info-p">Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. </p>
+					<p class="main_info-p">Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+					<p class="main_info-p">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+				</div>
+			</div>
+		</section>
 		<footer class="footer_main">
 			<div class="container clearfix">
 				<div class="footer_main-contant">
@@ -512,5 +520,6 @@
 		<script src="bower/jquery/jquery.min.js"></script>
 		<script src="bower/jquery-ui/jquery-ui.min.js"></script>
 		<script src="js/main.js"></script>
+		<script src="js/accordeon.js"></script>
 	</body>
 </html>

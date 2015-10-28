@@ -2,6 +2,8 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f4f4f4;
 }
 .acordion_m:hover {
   background: url("/img/slider_up.png") no-repeat;
@@ -59,6 +61,11 @@
   margin: 0;
   list-style: none;
 }
+.filtr_brands:hover {
+  background: url("/img/slider_up.png") no-repeat;
+  background-position: right 20px top 35px;
+  cursor: pointer;
+}
 .filtr_brands .filtr_brands-elem .acordeon_styl-checkbox-round:checked + .filtr-text:before {
   border: solid 3px #f60;
   background: #f60;
@@ -74,6 +81,7 @@
   display: block;
   position: relative;
   padding-left: 35px;
+  padding-bottom: 15px;
   color: #303030;
   font-size: 14px;
   font-weight: 400;
@@ -108,4 +116,101 @@
   width: 13px;
   height: 10px;
   background: url("/img/check_2222.png");
+}
+
+.filtr_money {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.filtr_money .acordeon_styl-header {
+  cursor: pointer;
+}
+.filtr_money .filtr_money-input {
+  text-indent: 15px;
+}
+.filtr_money .ui-state-default {
+  background: url("/img/slider.png") no-repeat;
+  position: absolute;
+  z-index: 2;
+  width: 13px;
+  height: 20px;
+}
+.filtr_money .ui-slider-range {
+  background: #ff6600;
+  height: 3px;
+  position: absolute;
+}
+
+#slider {
+  width: 280px;
+  height: 3px;
+  border: none;
+  background: #ddd;
+}
+
+.filter_oc {
+  list-style: none;
+  padding: 0;
+}
+.filter_oc:hover {
+  background: url("/img/slider_up.png") no-repeat;
+  background-position: right 20px top 35px;
+  cursor: pointer;
+}
+.filter_oc .filter_oc-elem .acordeon_styl-checkbox-round:checked + .filtr-text:before {
+  border: solid 3px #f60;
+  background: #f60;
+}
+.filter_oc .filter_oc-elem .acordeon_styl-checkbox-round:checked + .filtr-text:after {
+  transform: scale(0.99);
+  transition: 0.2s;
+}
+.filter_oc .filter_oc-elem .filtr-text:hover:after {
+  background: url("/img/check_2222.png");
+}
+.filter_oc .filter_oc-elem .filtr-text {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  color: #303030;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.filter_oc .filter_oc-elem .filtr-text:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: solid 3px #dee2e5;
+  border-radius: 5px;
+}
+.filter_oc .filter_oc-elem .filtr-text:after {
+  transform: scale(0);
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  content: '';
+  width: 13px;
+  height: 10px;
+  background: url("/img/check_1111.png");
+}
+.filter_oc .filter_oc-elem .filtr-text:hover:after {
+  transform: scale(0);
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  content: '';
+  width: 13px;
+  height: 10px;
+  background: url("/img/check_2222.png");
+}
+
+.acordeon_styl-header {
+  cursor: pointer;
+  margin: 0;
 }

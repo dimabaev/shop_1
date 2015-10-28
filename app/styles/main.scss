@@ -106,6 +106,10 @@ body {
 	}
 }
 
+.container-variabl{
+ float:right;
+ width:750px;
+}
 
 .location_main {
 	float:left;
@@ -189,6 +193,7 @@ body {
 	margin:0px;
 	background:#fff;
 	height: 52px;
+	margin-bottom: 34px;
 	.navigation_main-list{
 		list-style: none;
 		// text-align: center;
@@ -220,6 +225,28 @@ body {
 	}
 }
 
+.navigation_text{
+	list-style: none;
+	padding: 0;
+	.navigation_text-item{
+		display: inline-block;
+		.navigation_text-link{
+			text-decoration: none;
+			color:#777777;
+		}
+		.navigation_text-link--active{
+			text-decoration: underline;
+			color:$hover_and_active;
+		}
+	}
+}
+
+.watch_text{
+	font-size: 20px;
+	color:#333333;
+}
+
+
 .acordeon {
 	float:left;
 		.acordeon_styl {
@@ -249,7 +276,6 @@ body {
 							.acordeon_styl-header{
 								font-size: 16px;
 								color:$search_menu;
-								padding-top: 17px;
 							}
 							.filtr_availability-elem{
 								
@@ -259,7 +285,7 @@ body {
 					.filtr_brands {
 						@include border-bottom;
 						.filtr_brands-elem{
-							margin-bottom: 19px;
+							// margin-bottom: 19px;
 						}
 						.filtr_remove{
 							color:$filtr_remove;
@@ -376,32 +402,6 @@ body {
 	margin-left:11px;
 }
 
-#slider {
-	width:280px;
-	height: 3px;
-	border: none;
-	background: #ddd;	
-}
-.ui-slider {
-	position: relative;
-	.ui-slider-handle{
-		position: absolute;
-		z-index: 2;
-		width: 13px;
-		height: 20px;
-		background: #fff;
-	}
-
-}
-.ui-slider .ui-slider-range {
-    background: #ff6600;
-}
-
-.ui-slider-handle .ui-state-default .ui-corner-all {
-	top: 0px;
-	border: none;
-	background: url(/site/app/img/slider.png) no-repeat;
-}
 
 .navigation_element{
 	float: right;
@@ -410,7 +410,6 @@ body {
 	background:#e4ebee;
 	border:1px solid #fbfbfb;
 	border-radius: 5px;
-	margin-top: 12px;
 	margin-bottom: 21px;
 	.navigation_element-span{
 		display: inline-block;
@@ -614,6 +613,7 @@ body {
 // Переключатели страничек
 .main_switch {
 	float:right;
+	margin-bottom: 25px;
 	.switch_main{
 		width: 200px;
 		.switch_main-list{
@@ -643,26 +643,27 @@ body {
 }
 
 .main_info{
-	
+	font-weight: bold;
+	color: #333;
+	font-size: 20px;
 }
 
-.main_info-header{
-	font-size: 20px;
-	color: #333333;
-	padding-left:40px;
-}
 
 .main_info-left{
 	float:left;
 	width: 50%;
 	box-sizing: border-box;
-	padding: 0 40px;
+	padding-right: 20px;
 	margin-bottom: 34px;
+	font-weight: normal;
 }
 
 .main_info-right{
 	float:right;
 	width: 50%;
+	box-sizing: border-box;
+	padding-right: 20px;
+	font-weight: normal;
 }
 
 .main_info-p{
