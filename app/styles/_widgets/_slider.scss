@@ -1,0 +1,25 @@
+.ui-slider-horizontal {
+  height: 3px;
+  background: $grey;
+  @include border-radius(0);
+  border: 0 none;
+  margin-bottom: 14px;
+
+  * {
+    outline: none !important;
+  }
+
+  .ui-slider-range {
+    background: $orange;
+  }
+
+  .ui-slider-handle {
+    background: url('../img/slider.png') no-repeat;
+    position: absolute;
+    background-position: 6px 2px;
+    top: 0;
+    border: 0 none;
+    @include border-radius(0);
+    cursor: pointer;
+  }
+}

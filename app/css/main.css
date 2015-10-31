@@ -114,6 +114,39 @@ body {
   min-height: 100%;
 }
 
+.ui-slider-horizontal {
+  height: 3px;
+  background: #dee1e4;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 0 none;
+  margin-bottom: 14px;
+}
+.ui-slider-horizontal * {
+  outline: none !important;
+}
+.ui-slider-horizontal .ui-slider-range {
+  background: #ff6600;
+}
+.ui-slider-horizontal .ui-slider-handle {
+  background: url("../img/slider.png") no-repeat;
+  position: absolute;
+  background-position: 6px 2px;
+  top: 0;
+  border: 0 none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  cursor: pointer;
+}
+
 /* -----------section------------ */
 .header {
   background: #ffffff;

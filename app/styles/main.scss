@@ -38,6 +38,10 @@ $misc-sprite: sprite-map('_misc/*.png', $spacing: 70px);
 
 // @import "_plugins/_jquery-ui";
 
+
+// -------------widgets---------------
+@import "_widgets/_slider";
+
 /* -----------section------------ */
 // @import "section/**/*";
 @import "section/_header";

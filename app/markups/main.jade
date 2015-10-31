@@ -12,7 +12,11 @@ html
 
         meta(name='viewport' content='width=device-width')
         link(rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&subset=latin,cyrillic' media='screen, projection, print')
+        //============ widgets ================
+        link(rel="stylesheet" href="bower/jquery-ui/themes/ui-lightness/jquery-ui.css")
+        
         link(rel='stylesheet' type='text/css' href='css/main.css' media='screen, projection, print')
+        //============================ vendor style ============================
         link(rel="stylesheet" href="bower/normalize-css/normalize.css")
         //- script(src='bower/normalize-css/normalize-css')
 
@@ -34,10 +38,9 @@ html
                 block content
 
         include _common/_footer
-
+        
         script(src='bower/jquery/jquery.min.js')
-        //- script.
-            //- window.jQuery || document.write('<script src="/js/_vendors/jquery-1.11.3.min.js"><\/script>');
+        script(src='js/_plugins/jquery-ui.min.js')
+        script(src='js/main.js')
+  
             
-        script(src='js/plugins.min.js')
-        script(src='js/main.min.js')
