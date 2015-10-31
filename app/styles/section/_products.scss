@@ -124,7 +124,13 @@
 }
 
 .products__option-item {
+	background: transparent;
 	display: inline;
+}
+
+.products__option-item {
+	display: inline;
+	// background: $grey;
 }
 
 .products__option-key {
@@ -204,8 +210,8 @@
 }
 
 .products__price {
-	color: $grey;
-	font-size: 12px;
+	color: $black;
+	font-size: 20px;
 	line-height: 14px;
 	// @include open-sans(semibold);
 }

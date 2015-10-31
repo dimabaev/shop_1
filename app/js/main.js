@@ -1,20 +1,13 @@
-//slider 
-    $( "#slider" ).slider({
+$(function() {
+    $( "#slider-range" ).slider({
       range: true,
-      animate: "normal",
       min: 0,
-      max: 12000,
-      values: [ 3000, 6000 ],
-        stop: function(event, ui) {
-          jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
-          jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
-    },
-        slide: function(event, ui){
-          jQuery("input#minCost").val(jQuery("#slider").slider("values",0));
-          jQuery("input#maxCost").val(jQuery("#slider").slider("values",1));
-    }
-  });
-
-    $(function() {
-    $( "#accordion" ).accordion();
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    // $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+    //   " - $" + $( "#slider-range" ).slider( "values", 1 ) );
   });

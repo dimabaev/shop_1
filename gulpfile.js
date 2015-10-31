@@ -28,6 +28,12 @@ var
 			imgFolder   : 'app/img'
 		},
 
+		js : {
+			location : 'app/js/main.js',
+			plugins  : 'app/js/_plugins/*.js'
+			destination : 'js'
+		},
+
 		browserSync : {
 			baseDir : 'app',
 			watchPaths : ['app/*.html', 'app/css/*.css', 'app/js/*.js']
