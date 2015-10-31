@@ -1,838 +1,99 @@
-doctype html
-html(lang="ru")
-	head
-		meta(charset="UTF-8")
-		title Document
-		//- css-main
-		link(rel="stylesheet" href="css/main.css")
-		//- css-vendor
-		link(rel="stylesheet" href="bower/normalize-css/normalize.css")
-		//- link(rel="stylesheet" href="bower/jquery-ui/themes/smoothness/jquery-ui.min.css")
-	body
-		.wrapper
-			.main_content.clearfix
-				header.header_contact
-					.container
-						.social_icon
-							.social_icon-f.social_icon-main
-							.social_icon-vk.social_icon-main
-							.social_icon-tw.social_icon-main
-						.location_main
-							span.location_main-text
-								|ул.Маяковского 6, офис 17
-						.phon_main
-							span.phon_main-text
-								|+7(921) 123-12-13
-				header.header_search
-					.container
-						.logo_main
-							a.logo_main-link
-								img(src="/img/logo.png").logo_main-img
-						.search_main
-							input(type="search" placeholder="Что будем искать").search_main-input
-							input(type="submit" value="Найти").search_main-submit
-						ul.search_menu
-							li.search_menu-item
-								a(href="#").search_menu-link
-									|Карта проезда
-							li.search_menu-item
-								a(href="#").search_menu-link
-									|История заказов 
-							li.search_menu-item
-								a(href="#").search_menu-link
-									|Корзина
-				nav.navigation_main
-					.container
-						ul.navigation_main-list
-							li.navigation_main-item
-								a(href="#").navigation_main-link
-									|Планшеты
-							li.navigation_main-item
-								a(href="#").navigation_main-link.navigation_main-active
-									|Мобильные телефоны
-							li.navigation_main-item
-								a(href="#").navigation_main-link
-									|Mp3 плееры
-							li.navigation_main-item
-								a(href="#").navigation_main-link
-									|Персональные комьютеры 
-							li.navigation_main-item
-								a(href="#").navigation_main-link
-									|Ноутбуки
-							li.navigation_main-item
-								a(href="#").navigation_main-link
-									|Асессуары
-							li.navigation_main-item
-								a(href="#").navigation_main-link
-									|Бытовая техника
-				.navigation_text
-					.container
-						ul.navigation_text
-							li.navigation_text-item
-								a(href="#").navigation_text-link
-									|Главня
-							li.navigation_text-item
-								a(href="#").navigation_text-link
-									|>
-							li.navigation_text-item
-								a(href="#").navigation_text-link.navigation_text-link--active
-									|Каталог
-						h2.watch_text
-							|Мобильные телефоны
-				.container
-					aside.acordeon
-						.acordeon_styl
-							.acordeon_styl-position
-								form.filtr_availability
-									ul.acordion_m
-										h2.acordeon_styl-header#accordion
-											|Наличие в магазинах
-										li(style="display: block;").acordion_m-list.showHide
-											input(type="radio" name="world").acordion_m-input#input-round
-											label.acordion_m-label
-												|Во всех магазинах
+extends ../main
 
-										li(style="display: block;").acordion_m-list.showHide
-											input(type="radio" name="world").acordion_m-input#input-round
-											label.acordion_m-label
-												|В ближайших ко мне магазинах									
-									ul.filtr_brands
-										h2.acordeon_styl-header
-											|Бренды
-										li(style="display: block;").filtr_brands-elem.showHide
-											input(type="checkbox").acordeon_styl-checkbox-round
-											label.filtr-text
-												|Lenovo
-										li(style="display: block;").filtr_brands-elem.showHide
-											input(type="checkbox").acordeon_styl-checkbox-round
-											label.filtr-text
-												|Apple
-										li(style="display: block;").filtr_brands-elem.showHide
-											input(type="checkbox").acordeon_styl-checkbox-round
-											label.filtr-text
-												|Samsung
-										li(style="display: block;").filtr_brands-elem.showHide
-											input(type="checkbox").acordeon_styl-checkbox-round
-											label.filtr-text
-												|Asus
-										li(style="display: block;").filtr_brands-elem.showHide
-											input(type="checkbox").acordeon_styl-checkbox-round
-											label.filtr-text
-												|Motorola
-										li(style="display: block;").filtr_brands-elem.showHide
-											a(href="#").filtr_remove
-												span.filtr_remove-text
-													|Сбросить фильтр
-									ul.filtr_money			
-										h2.acordeon_styl-header
-											|Цены
-										li(style="display: block;").filtr_money-position-left.showHide
-											span.filtr_money-text
-												|от
-											input(type="text").filtr_money-input#minCost
-										li.filtr_money-position-right
-											span.filtr_money-text
-												|до
-											input(type="text").filtr_money-input#maxCost
-										li.filtr_money-position-range.clearfix
-											#slider.ui-slider.ui-slider-horizontal.ui-widget.ui-widget-content.ui-corner-all
-												.ui-slider-range.ui-widget-header.ui-corner-all
-												span.ui-slider-handle.ui-state-default.ui-corner-all
-												span.ui-slider-handle.ui-state-default.ui-corner-all
-									.filtr_color
-										h2.acordeon_styl-header
-											|Цвет
-										ul.filtr_color-list
-											li.filtr_color-item.filtr_color-item-white
-											li.filtr_color-item.filtr_color-item-gray
-											li.filtr_color-item.filtr_color-item-black
-											li.filtr_color-item.filtr_color-item-blue
-											li.filtr_color-item.filtr_color-item-red
-											li.filtr_color-item.filtr_color-item-yellow
-											li.filtr_color-item.filtr_color-item-orange
-											li.filtr_color-item.filtr_color-item-green
-											li.filtr_color-item.filtr_color-item-blueLight
-											li.filtr_color-item.filtr_color-item-purple
-											li.filtr_color-item.filtr_color-item-pink
-											li.filtr_color-item.filtr_color-item-brown
-									ul.filter_oc
-										h2.acordeon_styl-header
-											|Операционные системы
-										li(style="display: block;").filter_oc-elem.showHide
-											input(type="checkbox").acordeon_styl-checkbox-round
-											span.filtr-text
-												|Android
-										li.filter_oc-elem
-											input(type="checkbox").acordeon_styl-checkbox-round
-											span.filtr-text
-												|iOS
-										li.filter_oc-elem
-											input(type="checkbox").acordeon_styl-checkbox-round
-											span.filtr-text
-												|Windows Mobile
-										li.filter_oc-elem
-											input(type="checkbox").acordeon_styl-checkbox-round
-											span.filtr-text
-												|Symbian
-										li.filter_oc-elem
-											input(type="checkbox").acordeon_styl-checkbox-round
-											span.filtr-text
-												|Custom
-										li.filter_oc-elem
-											a(href="#").filter_oc-link
-												span.filter_oc-text
-													|Сбросить фильтр
-					//-правая колнка 
-					.container-variabl.clearfix
-						.main-content
-							section.navigation_element
-								span.navigation_element-span
-									|Сортировка по 
-								.navigation_element-block
-									ul.navigation_element-list
-										li.navigation_element-elem
-											|по цене
-										li.navigation_element-elem-2
-											|по популярности
-								.navigation_element-block-2
-									span.navigation_element-span-2
-										|Вид каталога
-									ul.navigation_element-list2
-										li.navigation_element-el.navigation_element-elem-box1
+block title
+	| Главная страница (main.psd)
 
-										li.navigation_element-el.navigation_element-elem-box2
-	
-										li.navigation_element-el.navigation_element-elem-box3
-							section.main_elements.clearfix
-								ul.main_elements-list
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-									li.main_elements-item
-										.main_elements-wrapper
-											img(src="/img/smart.png").main_elements-img
-										.main_elements-wrapper-block
-											.main_elements-miniwapper
-												img(src="/img/smartMini-2.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini-3.png").main_elements-imgmini
-											.main_elements-miniwapper
-												img(src="/img/smartMini.png").main_elements-imgmini
-										.main_elements-block-info
-											h2.main_elements-header
-												|Samsung GT-I9301I  GALAXY S 3   
-											ul.main_elements-body
-												li.main_elements-text
-													|Тип SIM-карты
-													span.main_elements-items
-														|Micro-SIM
-												li.main_elements-text
-													|Количество SIM-карт
-													span.main_elements-items
-														|1
-												li.main_elements-text
-													|Цвет
-													span.main_elements-items
-														|Белый
-												li.main_elements-text
-													|OC
-													span.main_elements-items
-														|Android
-												li.main_elements-text
-													|Связь 3G
-													span.main_elements-items
-														|Есть
-												li.main_elements-text
-													|4G(LTE)
-													span.main_elements-items
-														|Нет
-												li.main_elements-text
-													|GPS-модуль
-													span.main_elements-items
-														|Есть
-											ul.rating
-												li.rating-item.current
-													span.star1
-												li.rating-item
-													span.star2
-												li.rating-item
-													span.star3
-												li.rating-item
-													span.star4
-												li.rating-item
-													span.star5
-											.main_elements-money
-												span.main_elements-money-text
-													|11 290 ₽
-											.main_elements-indAndBasket.clearfix
-												span.main_elements-ind
-													|В наличии
-												input(type="submit" value="В корзину").main_elements-basket
-							section.main_switch.clearfix
-								nav.switch_main.clearfix
-									ul.switch_main-list
-										li.switch_main-item
-											a(href="#").switch_main-link
-													|<
-										li.switch_main-item
-											a(href="#").switch_main-link.switch_main-active
-													|1
-										li.switch_main-item
-											a(href="#").switch_main-link 
-													|2
-										li.switch_main-item
-											a(href="#").switch_main-link 
-													|3
-										li.switch_main-item
-											a(href="#").switch_main-link 
-													|>							
-		section.main_info
-			.container.clearfix
-				.main_info-text
-					h2.main_info-header
-					|Важная информация
-				.main_info-left
-					p.main_info-p
-						|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
-					p.main_info-p
-						|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
-					p.main_info-p
-						|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
-				.main_info-right
-					p.main_info-p
-						|Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития. 
-					p.main_info-p
-						|Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.
-					p.main_info-p
-						|Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.
-		footer.footer_main
-			.container.clearfix
-				.footer_main-contant
-					.logo_footer
-						a(href="#").logo_footer-link
-							img(src="/img/logo_footer.png").logo_footer-img
-					.footer_main-right-column
-						.icon_social
-							ul.icon_social-list
-								li.icon_social-el
-									a(href="#").icon_social-link.icon_social-f
-								li.icon_social-el
-									a(href="#").icon_social-link.icon_social-vk
-								li.icon_social-el
-									a(href="#").icon_social-link.icon_social-tw
-						nav.navigation_footer
-							ul.navigation_footer-list
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Планшеты
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Мобильные телефоны
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Mp3 плееры
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Персональные компьютеры
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Ноутбуки
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Аксессуары
-								li.navigation_footer-el
-									a(href="#").navigation_footer-link
-										|Батовая техника
-					//-p.of_inf
-						|All rights reserved. 2015. no copy alowed														
+block content
+	article.content-wrapper
+		.container
+			.main-title
+				| Мобильные телефоны
+			.main-content
+				
+				include ../_common/_sidebar
 
-
+				.content
+					.sort
+						.sort__left
+							.sprt__select--wrap
+								.sort__title
+									| Сортировка по
+								.sort__select
+									select.sort__select-elem
+										- var options = ["по цене", " по популярности"]
+										each option in options
+											option(value="")= options
+						.sort__right
+							.sort__title
+								|Вид каталога
+							.sort__view
+								ul.sort__view-list
+									- var items = ['row', 'grids', 'lines']
+									each item in items
+										li(class="sort__view-item sort__view-" + item data-view= item)
+											a(href="#").sort__view-link
+												.sort__view-icon
+					.products
+						ul.products__list
+							- for (var i = 0; i < 9; i++)
+								li.products__item
+									.products__item-inner
+										.products__left
+											.products__slideshow
+												.products__slideshow-block
+													a(href="#").products__slideshow-display
+														img(src="" alt="")
+													//- ul.products__slideshow-thumbs
+													//-   - for (var = j; j < 3; j++)
+													//- 		li.products__slideshow-item
+													//- 			a(href="#")
+													//- 				img(src="" + j alt="")
+													.products__article
+														.products__article-word Артикул
+														.products__article-num 180238
+											.products__desc
+												.products__desc-title Samsung GT-I9301I  GALAXY S 3   
+												ul.products__desc-options
+													- var options = {"Тип SIM-карты": "Micro-SIM", "Количество SIM-карт": "1", "Цвет": "Белый", "ОC": "Android", "Связь 3G": "Есть", "4G (LTE)": "Нет", "GPS-модуль": "Есть" };
+													each value, key in options
+														li.products__option-item= key
+														li.products__option-value= value
+												.products__rating
+													ul.products__rating-stars
+														li.products__rating-stars-item.products__rating-stars-item_fill
+														li.products__rating-stars-item.products__rating-stars-item_fill
+														li.products__rating-stars-item.products__rating-stars-item_fill
+														li.products__rating-stars-item
+														li.products__rating-stars-item
+													.products__rating-amount 3
+										.products__right
+											.products__info
+												.products__price 11 290
+													i.rub
+											.products__info-bottom
+												a(href="#").products__buy-btn В корзину
+												.products__availability
+													| В наличии
+						.pagination
+							ul.pagination__list
+								li.pagination__item.pagination__item-prev
+									a(href="#").pagination__link
+										.pagination__link
+								- for (var i = 1; i < 4; i++)
+									li.pagination__item
+										a(href="#").pagination__link
+											.pagination__mark= i
+								li.pagination__item.pagination__item-next
+									a(href="#").pagination__link
+										.pagination__mark
 													
-
-
-
-									
-
-		//-vendor-script										
-		script(src="bower/jquery/jquery.min.js")
-		script(src="bower/jquery-ui/jquery-ui.min.js")
-		//-main-script
-		script(src="js/main.js")
-		script(src="js/accordeon.js")
+			.attension
+				.main-title
+					|Важная информация
+				.attension__text
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.

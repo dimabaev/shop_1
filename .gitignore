@@ -3,7 +3,7 @@
 ### Example user template
 
 # IntelliJ project files
-
+.sass-cache
 .idea
 *.iml
 node_modules

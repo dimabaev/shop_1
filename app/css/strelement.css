@@ -1,0 +1,55 @@
+.main_elements-list--str {
+  list-style: none;
+  padding: 0;
+}
+.main_elements-list--str .main_elements-item--str {
+  display: block;
+  width: 743px;
+  border: 1px solid #dee1e4;
+  border-radius: 5px;
+  background: #fbfbfb;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt {
+  float: left;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position {
+  width: 140px;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrapper--img {
+  width: 133px;
+  height: 138px;
+  padding: 30px;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrapper--img .main_elements--img {
+  border: 1px solid #dee1e4;
+  background: #fbfbfb;
+  padding: 10px;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrappermini-block--img {
+  padding-left: 42px;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrappermini-block--img .main_elements-wrappermini--img {
+  display: inline-block;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrappermini-block--img .main_elements-wrappermini--img .main_elementsMini--img {
+  margin-left: 2px;
+  padding: 3px;
+  border: 1px solid #dee1e4;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrappermini-block--img .main_elements-art {
+  font-size: 12px;
+  color: #afafaf;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--ImgArt .main_elements-block--position .main_elements-wrappermini-block--img .main_elements-art .main_elements-article {
+  padding-left: 3px;
+  font-size: 14px;
+  color: #a2a2a2;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--textStar {
+  float: right;
+}
+.main_elements-list--str .main_elements-item--str .main_elements-block--textStar .main_elements-block--leftblock {
+  width: 570px;
+}

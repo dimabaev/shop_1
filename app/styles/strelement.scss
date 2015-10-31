@@ -1,0 +1,69 @@
+.main_elements-list--str{
+	list-style: none;
+	padding: 0;
+	.main_elements-item--str{
+		display: block;
+		width: 743px;
+		border: 1px solid #dee1e4;
+		border-radius: 5px;
+		background:#fbfbfb;
+		//блок с картинками и артикулам товара
+		.main_elements-block--ImgArt{
+			float: left;
+			//ширина контейнера
+			.main_elements-block--position{
+				width: 140px;
+			//обертка для картинки
+				.main_elements-wrapper--img{
+					width:133px;
+					height: 138px;
+					padding: 30px;							
+					//стилизация картинки
+					.main_elements--img{
+						border: 1px solid #dee1e4;
+						background:#fbfbfb;
+						padding:10px;
+						
+					}
+				}
+				//блок для мини фотографий 
+				.main_elements-wrappermini-block--img{
+					padding-left: 42px;
+					//обертка для мини фотографии
+					.main_elements-wrappermini--img{
+						display: inline-block;
+						//стилизация картинки
+						.main_elementsMini--img{
+							margin-left: 2px;
+							padding: 3px;
+							border: 1px solid #dee1e4;
+						}
+					}
+					//стилизация текс-ариткул
+					.main_elements-art{
+						font-size: 12px;
+						color:#afafaf;
+						display: inline-block;
+						margin-bottom: 15px;
+						//стилизация номера 
+						.main_elements-article{
+							padding-left: 3px;
+							font-size: 14px;
+							color:#a2a2a2;
+						}
+					}
+				}
+			}
+		}
+		//блок с текстом и рейтингом+ценой и отправкой в корзину
+		.main_elements-block--textStar{
+			float:right;
+			//задаем ширину нашему блоку 
+			.main_elements-block--leftblock{
+				width:570px;
+			}
+		}
+		// блок с ценой на товар и отправка его в корзину
+		
+	}
+}
