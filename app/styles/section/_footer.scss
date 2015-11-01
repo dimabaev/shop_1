@@ -26,7 +26,7 @@
   }
 }
 
-$dark-socials-map: sprite-map('/socials-dark/*.png', $spacing: 70px);
+
 
 .socials_footer {
   margin-bottom: 21px;
@@ -42,20 +42,23 @@ $dark-socials-map: sprite-map('/socials-dark/*.png', $spacing: 70px);
     margin-left: 26px;
   }
 
+
+  $socials-map: sprite-map('/socials/*.png', $spacing: 70px);
   $items: fb, vk, tw;
 
   @each $item in $items {
     .socials__item#{$item} {
       .socials__link {
         &:after {
-          @include get-sprite($dark-socials-map, $item);
+          @include get-sprite($socials-map, $item);
+          content: '';
           @include absolute-center;
         }
 
         &:hover {
           &:after{
-            $icon-name: $item + '-hovertop';
-            @include get-sprite($dark-socials-map, $icon-name);
+            $icon-name: $item + '-hover';
+            @include get-sprite($socials-map, $icon-name);
           }
         }
       }

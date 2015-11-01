@@ -29,7 +29,7 @@
 .socials__icon {
 	@include absolute-center;
 }
-//==============генерация оконок из спрайта============ не происходит их отображение ,хотя ошибки нет
+
 $socials: fb, vk, tw;
 $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 
@@ -37,6 +37,12 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 	.socials__item_#{$social} {
 		.socials__icon {
 			@include get-sprite($socials-map, $social);
+		}
+		&:hover {
+			&:after{
+				$icon-name: $social + '-hovertop';
+				@include get-sprite($socials-map, $icon-name);
+			}
 		}
 	}
 }
