@@ -6,22 +6,28 @@ var accordionToggle = (function () {
 		_setUpListners();
 	};
 
-	// Прослушивает события 
+	// Прослушивает события
 	var _setUpListners = function () {
-		$('.acordeon_styl-header').on('click', _itemToggle);//Скрывание и раскрывание элементов acordeon
+		$('.filter__title-link').on('click', _itemToggle);//Скрывание и раскрывание элементов acordeon
 	};
 		//пишем функцию для скрытия и раскрытия отдельных элементов акордиона
 	var _itemToggle = function (){
-		var showHide = $('.showHide');
-		if($(this).siblings(showHide).css('display') === 'block'){
-				$(this).siblings(showHide).slideUp(300);
-		}else{
-				$(this).siblings(showHide).slideDown(300);
+
+		var
+				container = $(this).closest('.filter__content');
+				content = container.find('.filter__content');
+
+		if (!container.hasClass('active')){
+					container.addClass('active');
+					content.stop(true, true).slideDown();
+		} else {
+					container.removeClass('active');
+					content.stop(true, true).slideUp();
 		}
 	};
-	
 
-	// Возвращаем объект (публичные методы) 
+
+	// Возвращаем объект (публичные методы)
 	return {
 		init: init
 	};

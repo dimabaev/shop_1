@@ -35,6 +35,8 @@
 
 .sort__view-list {
   @include clearfix;
+  margin: 0;
+  list-style: none;
 }
 
 .sort__view-item {
@@ -48,6 +50,11 @@
   position: relative;
   display: block;
   outline: none !important;
+}
+
+.sort__select--wrap {
+  padding-top: 11px;
+  padding-left: 20px;
 }
 
 $views-map: sprite-map('/views/*.png', $spacing: 70px);
@@ -65,7 +72,12 @@ $items: rows, grids, lines;
           @include get-sprite($views-map, $item);
     }
   }
+
+  &.active {
+    $hover-icon: $item + '-hover';
+     .sort__view-icon {
+        @include get-sprite($views-map, $item);
+  }
+  }
   }
 }
-
-

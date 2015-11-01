@@ -11,6 +11,8 @@
 		<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:100,400,600,700&amp;subset=latin,cyrillic" media="screen, projection, print">
 		<!--============ widgets ================-->
 		<link rel="stylesheet" href="bower/jquery-ui/themes/ui-lightness/jquery-ui.css">
+		<link rel="stylesheet" href="bower/select2/dist/css/select2.css">
+		<!--======================= main - css ====================-->
 		<link rel="stylesheet" type="text/css" href="css/main.css" media="screen, projection, print">
 		<!--============================ vendor style ============================-->
 		<link rel="stylesheet" href="bower/normalize-css/normalize.css">
@@ -35,7 +37,7 @@
 								</ul>
 							</div>
 							<div class="header__right">
-								<div class="adress">ул.Маяковского 6, офис 17</div><a href="tel:+8797987981">+8797987981</a>
+								<div class="adress">ул.Маяковского 6, офис 17</div><a href="tel:+8797987981" class="phone">+8797987981</a>
 							</div>
 						</div>
 					</div>
@@ -93,7 +95,7 @@
 									<ul class="filter__list">
 										<li class="filter__item">
 											<div class="filter__title"><a herf="#" class="filter__title-link">Наличие в магазине</a></div>
-											<div class="title__content">
+											<div class="filter__content">
 												<ul class="title__choose">
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
@@ -114,7 +116,7 @@
 										</li>
 										<li class="filter__item">
 											<div class="filter__title"><a href="#" class="filter__title-link">Бренды</a></div>
-											<div class="title__content">
+											<div class="filter__content">
 												<ul class="filter__choose filter__choose_checkboxes">
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
@@ -195,38 +197,38 @@
 										<li class="filter__item">
 											<div class="filter__title"><a href="#" class="filter__title-link">Операционная система</a></div>
 											<div class="filter__content">
-												<ul class="filter__choose filter__choose_chackboxes">
+												<ul class="filter__choose filter__choose_checkboxes">
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="location" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
 															<div class="filter__choose-text">Android</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="location" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
 															<div class="filter__choose-text">iOS</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="location" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
 															<div class="filter__choose-text">Symbian</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="location" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
 															<div class="filter__choose-text">Windows Mobile</div>
 														</label>
 													</li>
 													<li class="filter__choose-item">
 														<label class="filter__choose-label">
-															<input name="location" type="radio" class="filter__choose-input">
+															<input name="location" type="checkbox" class="filter__choose-input">
 															<div class="filter__choose-elem"></div>
 															<div class="filter__choose-text">Custom</div>
 														</label>
@@ -241,12 +243,12 @@
 							<div class="content">
 								<div class="sort">
 									<div class="sort__left">
-										<div class="sprt__select--wrap">
-											<div class="sort__title">Сортировка по</div>
+										<div class="sort__select--wrap">
+											<div class="sort__title">Сортировать по</div>
 											<div class="sort__select">
 												<select class="sort__select-elem">
-													<option value="">по цене, по популярности</option>
-													<option value="">по цене, по популярности</option>
+													<option value="">по цене</option>
+													<option value="">по популярности</option>
 												</select>
 											</div>
 										</div>
@@ -255,31 +257,36 @@
 										<div class="sort__title">Вид каталога</div>
 										<div class="sort__view">
 											<ul class="sort__view-list">
-												<li data-view="row" class="sort__view-item sort__view-row"><a href="#" class="sort__view-link">
+												<li data-view="rows" class="sort__view-item sort__view_rows"><a href="#" class="sort__view-link">
 														<div class="sort__view-icon"></div></a></li>
-												<li data-view="grids" class="sort__view-item sort__view-grids"><a href="#" class="sort__view-link">
+												<li data-view="grids" class="sort__view-item sort__view_grids"><a href="#" class="sort__view-link">
 														<div class="sort__view-icon"></div></a></li>
-												<li data-view="lines" class="sort__view-item sort__view-lines"><a href="#" class="sort__view-link">
+												<li data-view="lines" class="sort__view-item sort__view_lines"><a href="#" class="sort__view-link">
 														<div class="sort__view-icon"></div></a></li>
 											</ul>
 										</div>
 									</div>
 								</div>
 								<div class="products">
-									<ul class="products__list products__list_lines">
+									<ul id="products-list" class="products__list">
 										<li class="products__item">
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -294,7 +301,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -310,16 +317,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -336,15 +334,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -359,7 +362,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -375,16 +378,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -401,15 +395,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -424,7 +423,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -440,16 +439,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -466,15 +456,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -489,7 +484,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -505,16 +500,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -531,15 +517,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -554,7 +545,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -570,16 +561,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -596,15 +578,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -619,7 +606,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -635,16 +622,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -661,15 +639,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -684,7 +667,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -700,16 +683,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -726,15 +700,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -749,7 +728,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -765,16 +744,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -791,15 +761,20 @@
 											<div class="products__item-inner">
 												<div class="products__left">
 													<div class="products__slideshow">
-														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="" alt=""></a>
-															<div class="products__article">
-																<div class="products__article-word">Артикул</div>
-																<div class="products__article-num">180238</div>
-															</div>
+														<div class="products__slideshow-block"><a href="#" class="products__slideshow-display"><img src="img/smart.png" alt="" class="products__slideshow-img"></a>
+															<ul class="products__slideshow-thumbs">
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+																<li class="products__slideshow-item"><a href="#" class="products__slideshow-link"><img src="img/smartMini-2.png" alt="" class="products__slideshow-thumb-img"></a></li>
+															</ul>
+														</div>
+														<div class="products__article">
+															<div class="products__article-word">Артикул</div>
+															<div class="products__article-num">189238</div>
 														</div>
 													</div>
 													<div class="products__desc">
-														<div class="products__desc-title">Samsung GT-I9301I  GALAXY S 3   </div>
+														<div class="products__desc-title">Samsung FT-I9301I GALAXY S 3</div>
 														<ul class="products__desc-options">
 															<li class="products__option-item products__option-item_colored">
 																<div class="products__option-key">Тип SIM-карты</div>
@@ -814,7 +789,7 @@
 																<div class="products__option-value">Белый</div>
 															</li>
 															<li class="products__option-item">
-																<div class="products__option-key">ОC</div>
+																<div class="products__option-key">ОС</div>
 																<div class="products__option-value">Android</div>
 															</li>
 															<li class="products__option-item products__option-item_colored">
@@ -830,16 +805,7 @@
 																<div class="products__option-value">Есть</div>
 															</li>
 														</ul>
-														<div class="products__rating">
-															<ul class="products__rating-stars">
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item products__rating-stars-item_fill"></li>
-																<li class="products__rating-stars-item"></li>
-																<li class="products__rating-stars-item"></li>
-															</ul>
-															<div class="products__rating-amount">3</div>
-														</div>
+														<div data-rating="2" class="products__rating"></div>
 													</div>
 												</div>
 												<div class="products__right">
@@ -853,32 +819,32 @@
 											</div>
 										</li>
 									</ul>
-									<div class="pagination">
-										<ul class="pagination__list">
-											<li class="pagination__item pagination__item-prev"><a href="#" class="pagination__link">
-													<div class="pagination__link"></div></a></li>
-											<li class="pagination__item"><a href="#" class="pagination__link">
-													<div class="pagination__mark">1</div></a></li>
-											<li class="pagination__item"><a href="#" class="pagination__link">
-													<div class="pagination__mark">2</div></a></li>
-											<li class="pagination__item"><a href="#" class="pagination__link">
-													<div class="pagination__mark">3</div></a></li>
-											<li class="pagination__item pagination__item-next"><a href="#" class="pagination__link">
-													<div class="pagination__mark"></div></a></li>
-										</ul>
-									</div>
+								</div>
+								<div class="pagination">
+									<ul class="pagination__list">
+										<li class="pagination__item pagination__item_prev"><a href="#" class="pagination__link">
+												<div class="pagination__mark"></div></a></li>
+										<li class="pagination__item"><a href="#" class="pagination__link">
+												<div class="pagination__mark">1</div></a></li>
+										<li class="pagination__item"><a href="#" class="pagination__link">
+												<div class="pagination__mark">2</div></a></li>
+										<li class="pagination__item"><a href="#" class="pagination__link">
+												<div class="pagination__mark">3</div></a></li>
+										<li class="pagination__item pagination__item_next"><a href="#" class="pagination__link">
+												<div class="pagination__mark"></div></a></li>
+									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="attension">
 							<div class="main-title">Важная информация</div>
 							<div class="attension__text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae sint fuga, excepturi nam modi facilis architecto! Veniam vel, est excepturi.</p>
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
+								<p>Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции позволяет оценить значение соответствующий условий активизации. С другой стороны сложившаяся структура организации позволяет оценить значение системы обучения кадров, соответствует насущным потребностям.</p>
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Повседневная практика показывает, что сложившаяся структура организации влечет за собой процесс внедрения и модернизации позиций, занимаемых участниками в отношении поставленных задач. Значимость этих проблем настолько очевидна, что реализация намеченных плановых заданий в значительной степени обуславливает создание модели развития. Таким образом консультация с широким активом представляет собой интересный эксперимент проверки модели развития.</p>
+								<p>Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач. Таким образом сложившаяся структура организации требуют определения и уточнения направлений прогрессивного развития. Равным образом консультация с широким активом влечет за собой процесс внедрения и модернизации соответствующий условий активизации.</p>
 							</div>
 						</div>
 					</div>
@@ -888,7 +854,7 @@
 		<footer class="footer">
 			<div class="footer__top">
 				<div class="container">
-					<div class="footer_left"><a href="#" class="logo logo_footer"><img scr="/img/logo/logos.png" alt="cooltech logo" class="logo__img">
+					<div class="footer_left"><a href="#" class="logo logo_footer"><img scr="img/logo/logos.png" alt="cooltech" class="logo__img">
 							<div class="logo__text">cooltech </div></a></div>
 					<div class="footer__right">
 						<ul class="socials socials_footer">
@@ -915,6 +881,9 @@
 		</footer>
 		<script src="bower/jquery/jquery.min.js"></script>
 		<script src="js/_plugins/jquery-ui.min.js"></script>
+		<script src="js/_plugins/select2.min.js"></script>
+		<script src="js/_plugins/jquery.columnizer.min.js"></script>
+		<script src="js/accordeon.js"></script>
 		<script src="js/main.js"></script>
 	</body>
 </html>

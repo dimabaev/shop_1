@@ -55,7 +55,7 @@ $dark-socials-map: sprite-map('/socials-dark/*.png', $spacing: 70px);
         &:hover {
           &:after{
             $icon-name: $item + '-hovertop';
-            @include get-sprite($dark-socials-map, $icon-name);            
+            @include get-sprite($dark-socials-map, $icon-name);
           }
         }
       }

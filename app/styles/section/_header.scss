@@ -29,17 +29,17 @@
 .socials__icon {
 	@include absolute-center;
 }
+//==============генерация оконок из спрайта============ не происходит их отображение ,хотя ошибки нет
+$socials: fb, vk, tw;
+$socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 
-// $socials: fb, vk, tw;
-// $socials-map: sprite-map('socials/*.png', $spacing: 70px);
-//
-// @each $social in $socials {
-// 	.socials__item_#{$social} {
-// 		.socials__icon {
-// 			@include get-sprite($socials-map, $social);
-// 		}
-// 	}
-// }
+@each $social in $socials {
+	.socials__item_#{$social} {
+		.socials__icon {
+			@include get-sprite($socials-map, $social);
+		}
+	}
+}
 
 .header__left {
 	float: left;
@@ -49,6 +49,8 @@
 .header__right {
 	float: right;
 	width: 50%;
+	text-align: right;
+	margin-top: 15px;
 }
 
 .adress{
@@ -56,9 +58,17 @@
 		margin-right: 65px;
 		&:before {
 			content: '';
-			// @include get-sprite($misc-sprite, pin);
+			background: url('../img/_misc/map-pin.png') no-repeat;
+			width: 16px;
+			height: 16px;
 			@include inlineblock(middle);
 			margin-right: 9px;
+		}
+
+		&:hover {
+			text-decoration: underline;
+			color: $orange;
+			@include transition(0.3s);
 		}
 }
 
@@ -72,7 +82,15 @@
 		content: '';
 		@include inlineblock(middle);
 		margin-right: 11px;
-		// @include get-sprite($misc-sprite, phone);
+		background: url('../img/_misc/telephone.png') no-repeat;
+		width: 16px;
+		height: 16px;
+	}
+
+	&:hover {
+		text-decoration: underline;
+		color: $orange;
+		@include transition(0.3s);
 	}
 }
 
@@ -139,6 +157,10 @@
 	padding: 8px 15px;
 	width: 259px;
 	margin-right: -7px;
+	color: #878787;
+	&:focus {
+		outline: none;
+	}
 }
 
 .search__form-submit {
