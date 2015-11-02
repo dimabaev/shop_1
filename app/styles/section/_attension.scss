@@ -1,8 +1,17 @@
 .attension__text {
   p {
+    text-indent: 20px;
     font-size: 14px;
     line-height: 20px;
-    color: $black;
+    color: #474747;
     margin-bottom: 20px;
+    text-align: justify;
+    padding-left: 37px;
+    @include open-sans(regular);
   }
+}
+
+.main-title {
+  margin-bottom: 27px;
+  margin-left: 37px;
 }

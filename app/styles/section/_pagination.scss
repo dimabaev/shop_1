@@ -38,9 +38,8 @@
   @include open-sans(bold);
   font-size: 12px;
   color:#7f7f7f;
-}
 
-$pagination-map: sprite-map('/pagination/*.png', $spacing: 70px);
+$pagination-map: sprite-map('pagination/*.png', $spacing: 70px);
 
 @each $item in (left, right) {
   .paginatoin__item_#{$item} {
@@ -48,4 +47,5 @@ $pagination-map: sprite-map('/pagination/*.png', $spacing: 70px);
       @include get-sprite($pagination-map, $item);
     }
   }
+}
 }

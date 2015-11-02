@@ -9,9 +9,10 @@
 .sort__title {
   font-size: 14px;
   line-height: 16px;
-  color: #5d656c;
+  color: #888f94;
   @include inlineblock(middle);
   margin-right: 11px;
+  @include open-sans(regular);
 }
 
 .sort__select {
@@ -50,6 +51,7 @@
   position: relative;
   display: block;
   outline: none !important;
+
 }
 
 .sort__select--wrap {
@@ -57,13 +59,14 @@
   padding-left: 20px;
 }
 
-$views-map: sprite-map('/views/*.png', $spacing: 70px);
+$views-map: sprite-map('views/*.png', $spacing: 70px);
 $items: rows, grids, lines;
 
 @each $item in $items {
-  .sotr__view_#{$item} {
+  .sort__view_#{$item} {
     .sort__view-icon {
         @include get-sprite($views-map, $item);
+        @include absolute-center;
     }
 
     &:hover {
@@ -77,7 +80,7 @@ $items: rows, grids, lines;
     $hover-icon: $item + '-hover';
      .sort__view-icon {
         @include get-sprite($views-map, $item);
-  }
-  }
+    }
+   }
   }
 }

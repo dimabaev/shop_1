@@ -28,7 +28,7 @@
     .select2-selection__rendered {
       font-size: 12px;
       @include open-sans(light);
-      color: #7f7f7f;
+      color: #b2b2b2;
     }
 
     .select2-dropdown {
@@ -36,7 +36,7 @@
       bottom: 0 none;
       @include box-shadow(0 0 5px 0 rgba(134, 134, 134, .75));
       @include border-radius(5px);
-      background: #fff;
+      background: #fff !important;
     }
 
     .select2-results__option {

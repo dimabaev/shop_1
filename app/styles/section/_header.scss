@@ -62,6 +62,8 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 .adress{
 		@include inlineblock(middle);
 		margin-right: 65px;
+		cursor: pointer;
+		@include open-sans(regular);
 		&:before {
 			content: '';
 			background: url('../img/_misc/map-pin.png') no-repeat;
@@ -82,7 +84,7 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 	@include inlineblock(middle);
 	color: $black;
 	text-decoration: none;
-	margin-right: 25px;
+	@include open-sans(bold);
 
 	&:before {
 		content: '';
@@ -123,7 +125,7 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 
 .search {
 	float: left;
-	margin-right: 50px;
+	margin-right: 38px;
 	margin-left: 56px;
 }
 
@@ -136,9 +138,11 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 	font-size: 16px;
 	line-height: 18px;
 	color: $black;
-	// @include open-sans(semibold);
+	@include open-sans(semibold);
+	@include transition(0.5s);
 	&:hover {
 		color: $orange;
+		@include transition(0.5s);
 	}
 }
 
@@ -174,7 +178,7 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 	height: 39px;
 	background: $orange;
 	color: #ffffff;
-	// @include open-sans(semibold);
+	@include open-sans(semibold);
 	@include border-radius(0 5p 5p 0);
 	border: 1px solid $orange;
 }

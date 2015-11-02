@@ -51,8 +51,9 @@
 }
 
 .filter__item {
-  padding: 12px 26px;
+  padding: 4px 26px;
   border-top: 1px solid $grey;
+  cursor: pointer;
 
   &:first-child {
     border-top: 0 none;
@@ -97,6 +98,7 @@
   @include open-sans(semibold);
   margin-bottom: 18px;
   text-decoration: none;
+
 }
 
 .filter__choose {
@@ -148,6 +150,7 @@
 
 .filter__choose-text {
   @include inlineblock(top);
+  @include open-sans(regular);
   display: inline-block;
   font-size: 14px;
   line-height: 16px;
