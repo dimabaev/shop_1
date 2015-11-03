@@ -146,13 +146,13 @@
 
 .products__option-item {
 	display: inline;
-	// background: $grey;
 }
 
 .products__option-key {
 	display: inline;
 	font-size: 14px;
 	line-height: 16px;
+	padding: 4px 0 ;
 	@include open-sans(regular);
 }
 
@@ -160,6 +160,7 @@
 	display: inline;
 	font-size: 14px;
 	line-height: 16px;
+	padding: 4px 0 ;
 }
 
 //----------------- rating ---------------
@@ -167,18 +168,19 @@
 .products__rating-stars {
 	@include inlineblock(middle);
 	list-style: none;
+	padding: 0;
 }
 
-// $stars-map: $sprite-map('stars/*.png', $spacing: 70px);
-//
-// .products__rating-stars-item {
-// 	@include inlineblock(middle);
-// 	@include get-sprite($stars-map, no-fill);
-//
-// 	&.products__rating-stars-item_filled {
-// 		@include get-sprite($stars-map, fill);
-// 	}
-// }
+$stars-map: sprite-map('stars/*.png',  $spacing: 20px);
+
+.products__rating-stars-item {
+	@include inlineblock(middle);
+	@include get-sprite($stars-map, no-fill);
+
+	&.products__rating-stars-item_fill {
+		@include get-sprite($stars-map, fill);
+	}
+}
 
 .products__rating-amount {
 	@include inlineblock(middle);
@@ -225,6 +227,10 @@
 	background: $orange;
 	color: #fff;
 	margin-bottom: 9px;
+
+	&:hover{
+		background: darken($orange, 5%);
+	}
 }
 
 .products__price {
@@ -233,6 +239,7 @@
 	line-height: 14px;
 	@include open-sans(semibold);
 	margin-bottom: 10px;
+	padding-top: 12px;
 }
 
 .products__availability {

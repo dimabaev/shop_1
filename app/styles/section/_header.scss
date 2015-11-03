@@ -30,8 +30,8 @@
 	@include absolute-center;
 }
 
-$socials: fb, vk, tw;
 $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
+$socials: fb, vk, tw;
 
 @each $social in $socials {
 	.socials__item_#{$social} {
@@ -39,9 +39,9 @@ $socials-map: sprite-map('socials-dark/*.png', $spacing: 70px);
 			@include get-sprite($socials-map, $social);
 		}
 		&:hover {
-			&:after{
-				$icon-name: $social + '-hovertop';
-				@include get-sprite($socials-map, $icon-name);
+			.socials__icon{
+				$social-name: $social + '-hover';
+				@include get-sprite($socials-map, $social-name);
 			}
 		}
 	}

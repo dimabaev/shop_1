@@ -50,7 +50,6 @@
   list-style: none;
 }
 
-$select-tr-map: sprite-map('slider-arrow/*.png', $spacing: 70px);
 .filter__item {
   padding: 0px 26px;
   border-top: 1px solid $grey;
@@ -59,14 +58,6 @@ $select-tr-map: sprite-map('slider-arrow/*.png', $spacing: 70px);
   &:first-child {
     border-top: 0 none;
   }
-
-  &.active {
-    .filter__title{
-      &:after {
-        @include get-sprite($select-tr-map, arrow-top);
-      }
-    }
-  }
 }
 
 .filter__title {
@@ -74,17 +65,15 @@ $select-tr-map: sprite-map('slider-arrow/*.png', $spacing: 70px);
   padding-right: 30px;
   position: relative;
 
-  &:hover{
-
   &:after {
     content: '';
-    @include get-sprite($select-tr-map, arrow-bottom);
+    background: url('/img/slider_up.png') no-repeat;
+    // @include get-sprite($select-tr-map, to-top);
     position: absolute;
     top: 20px;
     right: 0;
     width: 20px;
     height: 10px;
-  }
   }
 }
 

@@ -15,6 +15,10 @@
   border: 1px solid $grey;
   position: relative;
   overflow: hidden;
+
+   &:hover {
+    box-shadow: 0px 0px 1px rgba(0,0,0,.2);
+  }
 }
 
 .pagination__link {
@@ -38,14 +42,15 @@
   @include open-sans(bold);
   font-size: 12px;
   color:#7f7f7f;
+}
 
-$pagination-map: sprite-map('pagination/*.png', $spacing: 70px);
+$pagination-map: sprite-map('pagination/*.png', $spacing: 50px);
+$elements: prev, next;
 
-@each $item in (left, right) {
-  .paginatoin__item_#{$item} {
+@each $element in $elements {
+  .pagination__item_#{$element} {
     .pagination__mark {
-      @include get-sprite($pagination-map, $item);
+      @include get-sprite($pagination-map, $element);
     }
   }
-}
 }

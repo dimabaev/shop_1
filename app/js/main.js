@@ -43,19 +43,19 @@ var RatingWidget = (function(){
 	var _letTheStarsShining = function(ratingAmount){
 		var
 			starsArray = [];
-
+	
 		for (var i = 0; i < 5; i++) {
 			var
 				starClassName = (i < ratingAmount) ? 'products__rating-stars-item products__rating-stars-item_filled' : 'products__rating-stars-item';
-
+	
 			var
 				star = $('<li>',{
 					class : starClassName
 				});
-
+	
 			starsArray.push(star);
 		}
-
+	
 		return starsArray;
 	}
 
@@ -63,15 +63,15 @@ var RatingWidget = (function(){
 		var
 			ul = $('<ul>', {
 				class : 'products__rating-stars',
-				html : _letTheStarsShining(ratingAmount)
+				// html : _letTheStarsShining(ratingAmount)
 			});
-
+	
 		var
 			ratingDisplay = $('<div>', {
 				class : 'products__rating-amount',
 				text : ratingAmount
 			});
-
+	
 		elementToAppend.append([ul, ratingDisplay]);
 	}
 
@@ -179,7 +179,7 @@ var Accordeon = (function(){
 
 	return {
 		init: function(){
-			$('.filter__item').on('click', function(e){
+			$('.filter__title').on('click', function(e){
 			    e.preventDefault();
 				_openSection($(this));
 
@@ -201,9 +201,9 @@ $(document).ready(function(){
 
 	ViewStateChange.init();
 
-	if ($('.products__rating').length) {
-		RatingWidget.init();
-	}
+	// if ($('.products__rating').length) {
+	// 	RatingWidget.init();
+	// }
 
 	if ($('.filter__slider-element').length) {
 		SliderWidget.init();
