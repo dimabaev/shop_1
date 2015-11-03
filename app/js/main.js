@@ -198,7 +198,7 @@ var Accordeon = (function(){
 
 }());
 
-Accordeon.init();
+// Accordeon.init();
 
 $(document).ready(function(){
 
