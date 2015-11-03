@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* --------compass----------- */
 .socials-sprite {
   background-image: url('../img/socials-sc88a3f8384.png');
@@ -42,6 +43,7 @@
 /* -------adjustment--------- */
 html {
   width: 100%;
+  height: 100%;
   font-size: 100.01%;
 }
 
@@ -71,6 +73,18 @@ body {
   position: relative;
   min-height: 100%;
   min-width: 1200px;
+}
+
+/*===========================╨Я╤А╨╕╨▒╨╕╨▓╨░╨╡╨╝ footer====================== */
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -222px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 223px;
+  clear: both;
 }
 
 .rub {
@@ -88,6 +102,7 @@ body {
 /* -------adjustment--------- */
 html {
   width: 100%;
+  height: 100%;
   font-size: 100.01%;
 }
 
@@ -117,6 +132,18 @@ body {
   position: relative;
   min-height: 100%;
   min-width: 1200px;
+}
+
+/*===========================╨Я╤А╨╕╨▒╨╕╨▓╨░╨╡╨╝ footer====================== */
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -222px;
+}
+
+.footer {
+  position: relative;
+  margin-top: 223px;
+  clear: both;
 }
 
 /*! jQuery UI - v1.11.4 - 2015-03-11
