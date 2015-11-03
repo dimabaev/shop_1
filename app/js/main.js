@@ -38,6 +38,8 @@ var SliderWidget = (function(){
 	}
 }());
 
+SliderWidget.init();
+
 var RatingWidget = (function(){
 
 	var _letTheStarsShining = function(ratingAmount){
@@ -88,6 +90,8 @@ var RatingWidget = (function(){
 	}
 }());
 
+RatingWidget.init();
+
 var ViewStateChange = (function(){
 
 	var _previousClass = '';
@@ -124,6 +128,8 @@ var ViewStateChange = (function(){
 	}
 }());
 
+ViewStateChange.init()
+
 var Slideshow = (function(){
 
 	var _changeSlide = function($this){
@@ -155,6 +161,9 @@ var Slideshow = (function(){
 	    }
     }
 }());
+
+Slideshow.init()
+
 
 var Accordeon = (function(){
 
@@ -188,6 +197,8 @@ var Accordeon = (function(){
 	}
 
 }());
+
+Accordeon.init()
 
 $(document).ready(function(){
 
