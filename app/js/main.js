@@ -128,7 +128,7 @@ var ViewStateChange = (function(){
 	}
 }());
 
-ViewStateChange.init()
+ViewStateChange.init();
 
 var Slideshow = (function(){
 
@@ -162,7 +162,7 @@ var Slideshow = (function(){
     }
 }());
 
-Slideshow.init()
+Slideshow.init();
 
 
 var Accordeon = (function(){
@@ -198,7 +198,7 @@ var Accordeon = (function(){
 
 }());
 
-Accordeon.init()
+Accordeon.init();
 
 $(document).ready(function(){
 
