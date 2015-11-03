@@ -40,57 +40,57 @@ var SliderWidget = (function(){
 
 SliderWidget.init();
 
-var RatingWidget = (function(){
+// var RatingWidget = (function(){
 
-	var _letTheStarsShining = function(ratingAmount){
-		var
-			starsArray = [];
+// 	var _letTheStarsShining = function(ratingAmount){
+// 		var
+// 			starsArray = [];
 	
-		for (var i = 0; i < 5; i++) {
-			var
-				starClassName = (i < ratingAmount) ? 'products__rating-stars-item products__rating-stars-item_filled' : 'products__rating-stars-item';
+// 		for (var i = 0; i < 5; i++) {
+// 			var
+// 				starClassName = (i < ratingAmount) ? 'products__rating-stars-item products__rating-stars-item_filled' : 'products__rating-stars-item';
 	
-			var
-				star = $('<li>',{
-					class : starClassName
-				});
+// 			var
+// 				star = $('<li>',{
+// 					class : starClassName
+// 				});
 	
-			starsArray.push(star);
-		}
+// 			starsArray.push(star);
+// 		}
 	
-		return starsArray;
-	}
+// 		return starsArray;
+// 	}
 
-	var _generateMarkup = function(ratingAmount, elementToAppend) {
-		var
-			ul = $('<ul>', {
-				class : 'products__rating-stars',
-				// html : _letTheStarsShining(ratingAmount)
-			});
+// 	var _generateMarkup = function(ratingAmount, elementToAppend) {
+// 		var
+// 			ul = $('<ul>', {
+// 				class : 'products__rating-stars',
+// 				html : _letTheStarsShining(ratingAmount)
+// 			});
 	
-		var
-			ratingDisplay = $('<div>', {
-				class : 'products__rating-amount',
-				text : ratingAmount
-			});
+// 		var
+// 			ratingDisplay = $('<div>', {
+// 				class : 'products__rating-amount',
+// 				text : ratingAmount
+// 			});
 	
-		elementToAppend.append([ul, ratingDisplay]);
-	}
+// 		elementToAppend.append([ul, ratingDisplay]);
+// 	}
 
-	return {
-		init: function(){
-			$('.products__rating').each(function(){
-				var
-					$this = $(this),
-					ratingAmount = parseInt($this.data('rating'));
+// 	return {
+// 		init: function(){
+// 			$('.products__rating').each(function(){
+// 				var
+// 					$this = $(this),
+// 					ratingAmount = parseInt($this.data('rating'));
 
-				_generateMarkup(ratingAmount, $this);
-			});
-		}
-	}
-}());
+// 				_generateMarkup(ratingAmount, $this);
+// 			});
+// 		}
+// 	}
+// }());
 
-RatingWidget.init();
+// RatingWidget.init();
 
 var ViewStateChange = (function(){
 
